@@ -1,4 +1,4 @@
-.main {
+/* .main {
     background-color: rgb(16, 15, 15);
     opacity: 0.3;
     color: whitesmoke;
@@ -75,4 +75,29 @@ home.data {
     display: flex;
     text-align: center;
     padding-top: 1.2%;
+} */
+
+.head {
+    height: 64px;
+    background-color: rgba(0,0,0,0.78);
+    line-height: 2.5em;
+    box-shadow: 0px 8px 6px rgrba(0,0,0, 0.2)
+}
+
+.smoke {
+    color: #d4d2b1
+}
+
+.smoke:hover {
+    color: white
+}
+
+.smoke:active{
+    color: gold;
+}
+
+.avatar {
+    padding: 10px;
+    background-color: red;
+    border-radius: 29px;
 }
