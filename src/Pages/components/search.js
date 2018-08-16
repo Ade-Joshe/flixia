@@ -8,18 +8,10 @@ class SearchBox extends Component {
   }
   render() {
     return (
-      <div className="col-xs-12 search-container nopadding" style={{float: 'right', width: '343px'}}>
-        <div className="row">
-          {/* <div className="col-xs-12 col-sm-6 col-lg-5">
-            <a href="./" title="ReactJS TMDb Movie Search"><img src={TMDBLogo} className="logo" alt="The Movie Database" /></a>
-          </div> */}
-          <div className="col-xs-12 col-sm-6 col-lg-7">
-            <form className="searchbox">
-              <label>
-                <input ref="search suggestion" onClick={this.handleChange} style={{width: '326px', opacity: 0.7}} className="searchbox__input typeahead form-control" type="text" placeholder="Search Movie Title..." id="q" />
-              </label>
-              </form>
-          </div>
+      <div className="input-group mb-3" style={{width:  '40%', float: 'right', paddingRight: '7px'}}>
+        <input type="text" className="form-control" ref="search suggestion" onClick={this.handleChange} placeholder="Search Movie Title.." aria-label="Recipient's username" aria-describedby="basic-addon2" />
+        <div className="input-group-append">
+          <span className="input-group-text fa fa-search" id="basic-addon2" style={{marginTop: 0, paddingTop: 9}}></span>
         </div>
       </div>
     )
