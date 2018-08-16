@@ -10,6 +10,11 @@ import GuttersGrid from './cardSet'
 // import LoginModal from './loginModal'
 import SearchBox from './search'
 
+const action = {
+	paddingTop: 5
+}
+
+
 function TabContainer({ children, dir }) {
   return (
     <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
@@ -73,7 +78,8 @@ class MovieTab extends React.Component {
         {/* <LoginModal /> */}
         <div style={{ height: '50px', paddingTop: '9px', paddingLeft: '15px',  }}>
           <span> 
-            <span style={{ paddingTop: '13px', fontWeight: 'bolder',  }}> {label[this.state.value]} </span>
+			  <span className="action"></span>
+            <span> {label[this.state.value]} </span>
           </span>
             <span> <SearchBox />   </span>
         </div>
