@@ -1,14 +1,20 @@
 .footer {
     height: 180px;
     background-color: rgb(37, 33, 33);
-    color: whitesmoke;
-    padding-top: 30px;
     width: 100%;
-    /* margin-left: 2.5%; */
-    box-sizing: border-box;
-    box-shadow: 1px 11px 9px 11px darkgrey;
-    padding-left: 45px;
+    bottom:0;
+    width:100%;
+    padding-top: 30px;
     padding-right: 45px;
+    box-sizing: border-box;
+    bottom:0; 
+    padding-left: 45px;
+    /* color: whitesmoke; */
+    overflow: auto;
+}
+
+.footer p {
+    color: #d4d2b1
 }
 
 .equal {
