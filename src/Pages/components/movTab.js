@@ -31,14 +31,14 @@ TabContainer.propTypes = {
 const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: '60%',
+    width: '80%',
     margin: 'auto',
-    marginTop: -73
+    marginTop: 2
   },
   hide: {
     overflowX: 'hidden',
-    width: '146%',
-    margin:' auto auto auto -180px'
+    width: '100%',
+    margin:' auto auto auto auto'
   },
 });
 
@@ -81,7 +81,13 @@ class MovieTab extends React.Component {
 			  <span className="action"></span>
             <span> {label[this.state.value]} </span>
           </span>
-            <span> <SearchBox />   </span>
+            <span> 
+              <SearchBox 
+              float='right'
+              placeholder='Search Movies Here'
+              width="40%"
+              icon='search'
+              />   </span>
         </div>
         </AppBar>
         <div className={classes.hide}>
