@@ -43,7 +43,6 @@ node_modules/
 Old*/
 
 # ignore app.js #
-*app.js
 
 # dependencies
 /node_modules
@@ -52,7 +51,7 @@ Old*/
 /coverage
 
 # production
-/build
+
 
 # misc
 .DS_Store
