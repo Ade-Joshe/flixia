@@ -34,7 +34,7 @@ const img1 = require('../images/img_parallax.jpg');
 class Slide extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeIndex: 0, fadeIn: true };
+    this.state = { activeIndex: 0 };
     this.toggle = this.toggle.bind(this);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
@@ -84,10 +84,10 @@ class Slide extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <Fade in={this.state.fadeIn}> 
             <img src={item.src} alt={item.altText} style={{width: '100%'}}/>
+            <div style={{marginTop: -50}}>
             <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-        </Fade>
+            </div>
         </CarouselItem>
       );
     });
