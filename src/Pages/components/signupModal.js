@@ -11,11 +11,11 @@ class SignUpModal extends Component {
   close = () => this.setState({ open: false })
 
   render() {
-    const { open, dimmer } = this.state
+    const { open, dimmer } = this.state;
 
     return (
       <span>
-        <button onClick={this.show('blurring')}>SignUp</button>
+        <p onClick={this.show('blurring')} className='trigger smoke' style={{marginRight: 10}}>SignUp</p>
           <div>
 			<Modal dimmer={dimmer} open={open} onClose={this.close} style={{margin: 'auto', height: 520, marginTop: 'auto', paddingLeft: '2%', paddingRight: '2%', width: 530 }}>
 				<div className="modal-body">

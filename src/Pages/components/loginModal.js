@@ -14,7 +14,7 @@ class LoginModal extends Component {
 
     return (
       <span>
-        <button onClick={this.show('blurring')} className=" " >Login</button>
+        <p onClick={this.show('blurring')} className="trigger smoke" >Login</p>
           <div>
 			<Modal dimmer={dimmer} open={open} onClose={this.close} style={{margin: 'auto', height: 520, marginTop: 'auto', paddingLeft: '2%', paddingRight: '2%', width: 530 }}>
 				<div className="modal-body">
