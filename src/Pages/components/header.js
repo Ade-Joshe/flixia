@@ -16,7 +16,8 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 import {NavLink as Link} from 'react-router-dom'
-
+import LoginModal from '../components/loginModal'
+import SignUpModal from '../components/signupModal'
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -62,6 +63,8 @@ export default class Header extends React.Component {
               <NavItem>
                 <NavLink href={item.link}><font className='smoke'>{item.name}</font></NavLink>
               </NavItem>))}
+                <LoginModal/>
+                <SignUpModal />
               <UncontrolledDropdown nav inNavbar direction="down">
                 <DropdownToggle nav>
                   <Avatar />
