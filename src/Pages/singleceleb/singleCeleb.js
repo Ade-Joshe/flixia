@@ -12,7 +12,7 @@ const SingleCeleb = () => {
         <Header/>
             <div className='parallax general'>
                 <div className='celebDescription'>
-                    <div className='celebBio' style={{ marginTop: '30px'}}>
+                    <div className='celebBio celebname'>
                         <span style={{fontSize: '3em', lineHeight: '1em'}}> Omotola Jolade Ekehinde</span>
                         <br />
                         <div className='bio'>
@@ -35,14 +35,10 @@ const SingleCeleb = () => {
                         <div className='biodescrip'>
                             lorempVoluptate incididunt ex minim consequat et veniam amet in excepteur. Sunt qui aliqua tempor quis consectetur. Irure in eiusmod ullamco aute laboris incididunt eiusmod dolor magna sunt nostrud minim.
                             Exercitation nisi occaecat velit id officia elit ea proident proident est quis. Nostrud qui et elit elit aliqua adipisicing aute non. Officia esse ex eiusmod duis culpa cupidatat incididunt sunt magna excepteur do veniam sint aliquip. Sint sint ex consectetur commodo aliqua nulla veniam do.
-                            Fugiat et ut aute qui ex anim culpa incididunt tempor. Nostrud est voluptate veniam in dolore commodo non amet sit est. Aliquip non commodo aliqua anim nostrud et. Enim amet consectetur commodo tempor consequat eu consectetur cupidatat consequat proident. Reprehenderit cillum ipsum excepteur consequat veniam commodo cillum ad laboris id deserunt quis minim in. Adipisicing nisi et esse ex duis aliqua incididunt veniam ad amet magna proident. Labore nulla dolor adipisicing sunt laboris minim laborum cupidatat ad proident incididunt pariatur nisi.
-                            Veniam sit laboris ex qui excepteur id adipisicing eiusmod officia. Consectetur officia deserunt occaecat commodo consequat non elit magna ipsum do voluptate qui voluptate. Dolor occaecat voluptate et duis duis dolor eu tempor nostrud laboris aute voluptate laboris. Voluptate nulla aute exercitation ipsum veniam. Ad elit qui eiusmod ut consectetur est ea. In consectetur duis excepteur magna consequat nulla proident aute est aliqua aute. Consectetur amet aliquip et aute ipsum aliquip nostrud ad qui laboris.
-                            Consectetur dolore est Lorem mollit Lorem ex incididunt occaecat qui duis eu sint. Ad esse officia nisi ad mollit excepteur labore. Ullamco ipsum tempor adipisicing eu fugiat anim ut sint consectetur. Occaecat commodo exercitation in anim qui esse commodo nulla commodo adipisicing ea ad. Pariatur ex non aliqua dolore. Non ea exercitation labore anim nostrud esse amet cupidatat aliqua ut ut velit in eu.
                         </div>
                         </div>
                     </div> <br />
                     <div className='celeb_achievements'>
-                    <hr />
                     <div className='actedMovies'>
                             <h2> Movies Acted</h2>
                             <div className='movieActedYear'>

@@ -29,18 +29,23 @@
 }
 
 .celebDescription {
+    color: whitesmoke;
     width: 40%;
     height: auto;
     float: right;
-    background-color: rgba(255,255,255, 0.2);
+    background-color: rgba(0,0,0, 0.6);
+    padding-bottom: 20px
 }
 
 .biodescrip {
-    width: 100%;
+    width: 95%;
     float: left;
+    margin: auto;
     margin-top: 30px;
-    background-color: rgba(255,255,255, 0.2);
+    color: ccc;
+    background-color: rgba(0,0,0, 0.7);
     padding: 10px 20px 20px 20px;
+    border-radius: 8px
 }
 
 @media screen and (max-width: 500px){
@@ -49,9 +54,8 @@
         height: auto;
         float: right;
         margin-block-end: auto;
-        margin-top: 500px;
-        background-color: white;
-        padding: 20px
+        margin-top: 285px;
+        background-color: rgba(0,0,0, 0.7);
         }
 
     .biodeet{
@@ -63,15 +67,23 @@
         float: left;
         padding: 30px;
         margin-top: 200px;
-        background-color: white;
+        background-color: rgba(0,0,0, 0.6);
+        color: whitesmoke;
     }
 
-    .celebDescription {
-        padding:30px;
+    .celebname {
+        margin: 0;
+        padding: 0
+    }
+    .celebBio{
+        margin: 0;
+        padding: 0;
     }
 
     .biodescrip{
-        padding: 0
+        padding: 20px;
+        padding-top: 10px;
+        width: 95%;
     }
 
     .actedMovies {
@@ -97,15 +109,16 @@
     /* background-color: rgba(255,255,255, 0.8); */
     height: auto;
     float: left;
-    padding: 0 20px
-    /* margin-left: 30px */
+    padding: 0
+       /* margin-left: 30px */
 }
 
 .celeb_achievements {
     float: left;
     padding: 30px;
-    background-color: rgba(255,255,255, 0.2);
+    background-color: rgba(0,0,0, 0.6);
     width: 100%;
+    color: whitesmoke;
 }
 
 .actedMovies{
@@ -120,4 +133,9 @@
 .Tvshows {
     float: right;
     width: 50%;
+}
+
+.celebBio {
+    padding-left: 20px;
+    margin-top: 30px;
 }
