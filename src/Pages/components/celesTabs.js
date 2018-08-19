@@ -28,7 +28,7 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
     width: '60%',
     margin: 'auto',
-    marginTop: -73
+    marginTop: 2
   },
   hide: {
     overflowX: 'hidden',
@@ -52,6 +52,7 @@ class CelebTab extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
+    const label = ['Action', 'Crime', 'Drama', 'Humor', 'Romance'];
 
     return (
       <div className={classes.root}>
@@ -63,16 +64,15 @@ class CelebTab extends React.Component {
             textColor="primary"
             fullWidth
           >
-            <Tab label="Action" />
-            <Tab label="Crime" />
-            <Tab label="Drama" />
-            <Tab label="Humor" />
-            <Tab label="Romance" />
+         { label.map( TabLabel => 
+            <Tab label={TabLabel} />
+                )}
           </Tabs>
         {/* <LoginModal /> */}
         <div style={{ height: '50px', paddingTop: '9px', paddingLeft: '15px',  }}>
           <p> 
-            <span style={{ paddingTop: '6px' }}>  </span>
+          <span className="action"></span>
+            <span> {label[this.state.value]} </span>
             <SearchBox 
               float='right'
               placeholder='Search Celebrities Here'
