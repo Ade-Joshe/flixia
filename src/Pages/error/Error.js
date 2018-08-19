@@ -8,31 +8,30 @@ import './Error.css';
 
 const Error = () => {
     return(
-        <div>
+        <div className='errorskin'>
             <Header 
-                logo="Best"
-                // the data represents the header data and their routes link
-                // please check the app.js to make sure the link exists in the 
-                // Routing file
-                data={[
-                    {
-                        name: 'Contact',
-                        link: '/contact'
-                    },
-                    {
-                        name: 'About',
-                        link: '/about'
-                    },
-                    {
-                        name: 'Home',
-                        link: '/'
-                    }
-                ]}
+                // logo="Best"
+                // // the data represents the header data and their routes link
+                // // please check the app.js to make sure the link exists in the 
+                // // Routing file
+                // data={[
+                //     {
+                //         name: 'Contact',
+                //         link: '/contact'
+                //     },
+                //     {
+                //         name: 'About',
+                //         link: '/about'
+                //     },
+                //     {
+                //         name: 'Home',
+                //         link: '/'
+                //     }
+                // ]}
             />
-            <h1 className="general">Page Navigation does not Exist </h1>
-            <NavLink to="/"> Home </NavLink>
-            <NavLink to="/contact"> Contact </NavLink>
-            <NavLink to="/about"> About </NavLink>
+            <div className="general">
+             
+            </div>
             <Footer />
         </div>
     );
