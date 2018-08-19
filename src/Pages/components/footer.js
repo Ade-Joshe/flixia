@@ -8,14 +8,14 @@ import SearchBox from './search'
 const Footer = () => {
     return(
             <div className="footer">
-                <div className="big-box">
-                    <div className="box dem box1 ">
+                <div className="big-box res-row">
+                    <div className="box dem box1 res-column">
                         <h1 className='smoke'> NMDb </h1>
                         <p className='smoke'>Nollywood Movie Database</p>
                         <p className="sign smoke"> &copy; Copyright 2018, All rights reserved </p>
                     </div>
                     <div className="box box2">
-                        <div className="equal ">
+                        <div className="equal res-column">
                             <ul style={{ paddingLeft: 0, fontWeight: 'bolder'}} className='smoke'>
                                 <li>MOVIES</li>
                                 <li>TV SHOWS</li>
@@ -23,20 +23,20 @@ const Footer = () => {
                                 <li>NEWS</li>
                             </ul>
                         </div>
-                        <div className="contact ">
+                        <div className="contact res-column">
                             <li ><NavLink className='smoke' to="/about"> About </NavLink></li>
                             <li ><NavLink className='smoke' to="/termsofservice"> Terms Of Service </NavLink> </li>                   
                             <li ><NavLink className='smoke' to="/privacy"> Privacy Policy </NavLink> </li>                   
                         </div>
                     </div>
-                    <div className="box1">
+                    <div className="box1 res">
                         <p><b> FOLLOW US </b></p>
-                            <span className='smoke'><b className="fa fa-facebook"></b> &nbsp;&nbsp; Facebook </span ><br />
-                            <span className='smoke'><b className="fa fa-twitter"></b> &nbsp; Twitter </span><br />
-                            <span className='smoke'><b className="fa fa-instagram"></b> &nbsp; Instagram </span><br />
-                            <span className='smoke'><b className="fa fa-google"></b> &nbsp; Google </span><br />
+                        <span className='smoke'><b className="fa fa-facebook"></b> &nbsp;&nbsp; Facebook </span ><br />
+                        <span className='smoke'><b className="fa fa-twitter"></b> &nbsp; Twitter </span><br />
+                        <span className='smoke'><b className="fa fa-instagram"></b> &nbsp; Instagram </span><br />
+                        <span className='smoke'><b className="fa fa-google"></b> &nbsp; Google </span><br />
                     </div>
-                    <div className="box2 no-box smoke">
+                    <div className="box2 no-box smoke res-column">
                        <span><b>SUBSCRIBE TO OUR NEWS</b></span>
                         <br />
                         <span>
