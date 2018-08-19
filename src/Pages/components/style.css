@@ -17,6 +17,11 @@
     float: right
 }
 
+.trigger{
+    padding: 19px 0 0 13px;
+    cursor: pointer;
+}
+
 .modal-content {
     /* margin-top: 2%; */
     text-align: center;
