@@ -72,10 +72,13 @@ class CelebTab extends React.Component {
         {/* <LoginModal /> */}
         <div style={{ height: '50px', paddingTop: '9px', paddingLeft: '15px',  }}>
           <p> 
-            <span style={{ paddingTop: '6px' }}> List_View </span>
-            <span style={{ paddingTop: '6px' }}> Grid_view </span>
-            <span style={{ paddingTop: '6px' }}> Mixed_view </span>
-            <SearchBox />
+            <span style={{ paddingTop: '6px' }}>  </span>
+            <SearchBox 
+              float='right'
+              placeholder='Search Celebrities Here'
+              width="40%"
+              icon='search'
+              />
           </p>
         </div>
         </AppBar>
