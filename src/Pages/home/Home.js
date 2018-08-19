@@ -19,7 +19,7 @@ const Home = () => {
                 {/* <span> <img src={img} alt='' className='imag'/></span> */}
                 <Slide />
             </div>
-            <div style={{position: "relative", marginTop: -50}}>
+            <div className='movietab'>
                 <MovieTab />
             </div>
             {/* movie cards grid comes here */}

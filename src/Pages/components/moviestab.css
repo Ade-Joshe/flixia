@@ -1,0 +1,17 @@
+.movroot {
+    width: 80%;
+    margin: auto;
+    margin-top: 2px
+}
+
+.movhide {
+    overflow-x: hidden;
+    width: 100%;
+    margin: auto auto auto auto;
+}
+
+@media screen and (max-width: 500px){
+    .movroot {
+        width: 100%
+    }
+}
