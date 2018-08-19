@@ -15,6 +15,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+import {NavLink as Link} from 'react-router-dom'
+
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -52,7 +54,7 @@ export default class Header extends React.Component {
     return (
       <div className="head">
         <Navbar color="black" light expand="md" style={{padding: '0 1rem'}}>
-          <NavbarBrand><NavLink to='/'><font className='smoke'>Flixia</font></NavLink></NavbarBrand>
+          <NavbarBrand><Link to='/'><font className='smoke'>Flixia</font></Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
