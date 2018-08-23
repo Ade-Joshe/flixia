@@ -11,7 +11,7 @@ class SearchBox extends Component {
   }
   render() {
     return (
-      <div className="input-group mb-3" style={{width: this.props.width, float: this.props.float, paddingRight: '7px'}}>
+      <div className="input-group mb-3 searchText">
         <input type="text" className="form-control" ref="search suggestion" onClick={this.handleChange} placeholder={this.props.placeholder} aria-label="Recipient's username" aria-describedby="basic-addon2" />
         <div className="input-group-append" >
           <span className={"input-group-text fa fa-"+ this.props.icon} id="basic-addon2" style={{marginTop: 0, paddingTop: 9, backgroundColor: 'gold'}}></span>
