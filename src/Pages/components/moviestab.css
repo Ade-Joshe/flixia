@@ -12,6 +12,10 @@
 
 @media screen and (max-width: 500px){
     .movroot {
-        width: 100%
+        width: 97%;
+    }
+
+    .movietab {
+        margin-top: -178px
     }
 }

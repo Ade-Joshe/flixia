@@ -10,6 +10,8 @@ import GuttersGrid from './cardSet'
 // import LoginModal from './loginModal'
 import SearchBox from './search'
 import './moviestab.css'
+
+
 const action = {
 	paddingTop: 5
 }
@@ -73,7 +75,7 @@ class MovieTab extends React.Component {
 			  <span className="action"></span>
             <span> {label[this.state.value]} </span>
           </span>
-            <span> 
+            <span style={{float: 'right'}}> 
               <SearchBox 
               float='right'
               placeholder='Search Movies Here'
