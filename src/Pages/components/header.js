@@ -50,7 +50,7 @@ export default class Header extends React.Component {
         name: 'News',
         link: '/news'
       }];
-    const dropdowns = ['SignUp', 'Login', 'View Profile', 'Reset'];
+    const dropdowns = ['View Profile'];
     // const { classes } = 
     return (
       <div className="head">
