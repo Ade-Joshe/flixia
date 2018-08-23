@@ -1,3 +1,24 @@
+@media screen and (max-width: 770px){
+    .navbar-collapse {
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .trigger {
+        padding: 35px 0 0 0;
+        float: left 
+    }
+
+    .movroot{
+        margin-top: -180px
+    }
+}
+
+
+.navbar-nav {
+    float: right;
+    margin-right: 30px
+}
+
 .head {
     height: 64px;
     background-color: rgba(0,0,0,0.78);
