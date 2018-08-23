@@ -18,27 +18,18 @@
 }
 
 .trigger{
-    padding: 19px 0 0 13px;
+    padding: 19px 0 0 0;
     cursor: pointer;
 }
 
 .modal-content {
-    /* margin-top: 2%; */
     text-align: center;
-    padding-top: 11%;
     margin: auto;
     width: 351px;
     margin-top: 1rem;
     border: none;
 }
 
-.model-content {
-    box-sizing: border-box;
-    padding: 50px;
-    height: 220px;
-    width: 351px;
-    margin:auto
-}
 
 .modal_half {
     margin-top: 20px;
@@ -90,4 +81,42 @@
     width: 351px;
     margin-top: 10px;
     border-radius: 8px
+}
+
+.modal {
+    margin: auto;
+    height: 42%;
+    margin-top: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 40%;
+}
+
+
+@media screen and (max-width:500px){
+    .modal-content{
+        padding: 0;
+        margin: 0;
+        width: 100%
+    }
+
+    .mass {
+        width: 100%;
+        font-size: 12px;
+        height: 30px;
+    }
+
+    .myInput{
+        width: 100%;
+        height: 30px
+    }
+
+    .modal-deet{
+        padding-bottom: 20px;
+        font-size: 12px
+    }
+
+    .styles_modal__gNwvD {
+        width: 85%
+    }
 }
