@@ -180,4 +180,25 @@ ul {
     .general {
         padding-top: 50px 
     }
+    .footer{
+        padding:30px
+    }
+}
+
+@media screen and (max-width: 770px){
+    .box1 {
+        width: 50%;;
+        margin-bottom: 10px;
+        padding: 0;
+        border: none;
+    }
+
+    .box2 {
+        width: 50%;
+        margin-bottom: 33px;
+        border: none;
+        padding: 0
+    }
+
+    
 }

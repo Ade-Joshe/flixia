@@ -25,7 +25,7 @@ const Footer = () => {
                         </div>
                         <div className="contact res-column">
                             <li ><NavLink className='smoke' to="/about"> About </NavLink></li>
-                            <li ><NavLink className='smoke' to="/termsofservice"> Terms Of Service </NavLink> </li>                   
+                            <li ><NavLink className='smoke' to="/termsofservice"> T & C </NavLink> </li>                   
                             <li ><NavLink className='smoke' to="/privacy"> Privacy Policy </NavLink> </li>                   
                         </div>
                     </div>
@@ -37,13 +37,13 @@ const Footer = () => {
                         <span className='smoke'><b className="fa fa-google"></b> &nbsp; Google </span><br />
                     </div>
                     <div className="box2 no-box smoke res-column">
-                       <span><b>SUBSCRIBE TO OUR NEWS</b></span>
+                       <span><b>SUBSCRIBE TO OUR NEWSLETTER</b></span>
                         <br />
                         <span>
                             Don't miss out on our amazing contents, we keep you up to date
                         </span><br /><br />
                         <form>
-                            <SearchBox float='left' placeholder='Your Email' width='80%' icon='envelope'/>
+                            <SearchBox float='left' placeholder='Your Email' width='100%' icon='envelope'/>
                             {/* <button className="btn btn-md btn-warning hidden">Subscribe</button> */}
                         </form>
                     </div>
