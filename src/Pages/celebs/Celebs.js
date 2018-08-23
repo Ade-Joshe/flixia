@@ -4,7 +4,7 @@ import Header from '../components/header';
 import CelebTab from '../components/celesTabs';
 import Footer from '../components/footer';
 import './Celebs.css';
-import Slide from '../components/slideshow'
+import Slide from '../components/slideshow';
 
 const Celebs = () => {
     return (
@@ -18,7 +18,7 @@ const Celebs = () => {
                 {/* <span> <img src={img} alt='' className='imag'/></span> */}
                 <Slide />
             </div>
-            <div style={{position: "relative", marginTop: -50}}>
+                <div className='movietab'>                
                 <CelebTab />
             </div>
             {/* movie cards grid comes here */}
