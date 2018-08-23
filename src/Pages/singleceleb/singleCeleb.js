@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import './singleCeleb.css';
 import '../general_style.css'
 import celebBig from '../images/omotola.jpg';
-
+import Comment from '../components/comment'
 
 const SingleCeleb = () => {
     return(
@@ -53,11 +53,13 @@ const SingleCeleb = () => {
                                 <span style={{marginLeft: 90 }}> Deserunt officia amet quis nostrud ipsum. </span>
                             </div>
                         </div>
+                        <br />
+                        >
+                        <br />
+                    <Comment />
+                    <Comment />
+                    <Comment />
                         </div>
-                    {/* <div>
-                        Minim ut incididunt in irure dolore cupidatat. Sit aliqua duis incididunt adipisicing quis sint exercitation minim proident consequat esse. Reprehenderit sunt et nostrud dolor commodo duis laborum et dolor exercitation. Ex cupidatat mollit veniam reprehenderit enim tempor. Dolor incididunt et ad id irure ea eu nulla sint qui.
-                        Commodo nisi excepteur mollit exercitation id nostrud id nisi cupidatat aute elit enim consequat. Ad proident dolore esse dolor aliquip consequat irure elit aliqua nisi sunt. Culpa est deserunt excepteur do fugiat. Nisi adipisicing ut Lorem occaecat qui dolor officia mollit ipsum est laboris consequat deserunt. Ad esse incididunt enim sint nostrud dolor veniam velit. Culpa laboris veniam sunt duis nulla minim mollit. Mollit do occaecat eu ullamco anim qui quis fugiat consequat non ex eu anim aliqua.
-                    </div> */}
                 </div>
         <Footer/>
     </div>
