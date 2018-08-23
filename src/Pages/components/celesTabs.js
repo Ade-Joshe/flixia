@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import GuttersGrid from './cardSet'
 import SearchBox from './search'
 // import LoginModal from '../'
+import './moviestab.css'
 
 function TabContainer({ children, dir }) {
   return (
@@ -26,15 +27,7 @@ TabContainer.propTypes = {
 const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: '60%',
-    margin: 'auto',
-    marginTop: 2
-  },
-  hide: {
-    overflowX: 'hidden',
-    width: '146%',
-    margin:' auto auto auto -180px'
-  },
+  }
 });
 
 class CelebTab extends React.Component {
@@ -55,7 +48,7 @@ class CelebTab extends React.Component {
     const label = ['Action', 'Crime', 'Drama', 'Humor', 'Romance'];
 
     return (
-      <div className={classes.root}>
+      <div className={'movroot ' + classes.root}>
         <AppBar position="static" color="default">
           <Tabs
             value={this.state.value}
@@ -82,7 +75,7 @@ class CelebTab extends React.Component {
           </p>
         </div>
         </AppBar>
-        <div className={classes.hide}>
+        <div className='movhide'>
             <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={this.state.value}
