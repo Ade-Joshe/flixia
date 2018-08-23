@@ -12,3 +12,8 @@ p {
         padding-top: 50px 
     }
 }
+
+.searchText{
+    width: 100%;
+    padding-right: 7px;
+}
