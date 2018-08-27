@@ -1,10 +1,10 @@
- import React from 'react'
+import React from 'react'
 import Header from '../components/header';
 import Footer from '../components/footer';
 import './singleCeleb.css';
 import '../general_style.css'
-import celebBig from '../images/omotola.jpg';
-import Comment from '../components/comment'
+// import celebBig from '../images/omotola.jpg';
+import Comment from '../components/falsecom'
 
 const SingleCeleb = () => {
     return(
@@ -32,7 +32,7 @@ const SingleCeleb = () => {
                             
                             </div>
                         </div>
-                        <div className='biodescrip'>
+                    <div className='biodescrip'>
                             lorempVoluptate incididunt ex minim consequat et veniam amet in excepteur. Sunt qui aliqua tempor quis consectetur. Irure in eiusmod ullamco aute laboris incididunt eiusmod dolor magna sunt nostrud minim.
                             Exercitation nisi occaecat velit id officia elit ea proident proident est quis. Nostrud qui et elit elit aliqua adipisicing aute non. Officia esse ex eiusmod duis culpa cupidatat incididunt sunt magna excepteur do veniam sint aliquip. Sint sint ex consectetur commodo aliqua nulla veniam do.
                         </div>
@@ -56,9 +56,11 @@ const SingleCeleb = () => {
                         <br />
                         >
                         <br />
-                    <Comment />
-                    <Comment />
-                    <Comment />
+                        <div style={{ paddingLeft: 30 }}>
+                            <Comment />
+                            <Comment />
+                            <Comment />
+                        </div>
                         </div>
                 </div>
         <Footer/>
