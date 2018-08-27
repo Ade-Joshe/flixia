@@ -7,6 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 import 'font-awesome/css/font-awesome.css' 
 import 'semantic-ui-css/semantic.min.css';
 import 'jquery/dist/jquery'
+import 'video-react/dist/video-react.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
