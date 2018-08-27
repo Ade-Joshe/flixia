@@ -24,11 +24,11 @@ const Home = () => {
             </div>
             {/* movie cards grid comes here */}
 
-            <div className='myloader'>
+            {/* <div className='myloader'>
                 <button className='btn btn-md but'>Load More &nbsp;&nbsp; <i className='fa fa-refresh'></i></button>
+            </div> */}
             <hr />
-                <Footer /> 
-            </div>
+            <Footer /> 
             {/* page footer goes here */}
         </div>
     )

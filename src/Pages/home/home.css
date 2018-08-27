@@ -31,14 +31,18 @@
 
 .movietab {
     position: relative;
-    margin-top: -50px
+    margin-top: -23px
 }
 
-/* @media screen and (min-width: 750px){
-    .bighead{
+@media screen and (max-width: 750px){
+    /* .bighead{
         height: 473px
+    } */
+
+    .movietab {
+        margin-top: -200px
     }
-} */
+}
 
 @media screen and (max-width: 500px){
     .movietab{
