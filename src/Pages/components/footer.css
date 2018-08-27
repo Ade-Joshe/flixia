@@ -136,6 +136,24 @@ ul {
 }
 
 
+@media screen and (max-width: 770px){
+    .box1 {
+        width: 50%;;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: none;
+    }
+
+    .box2 {
+        width: 50%;
+        margin-bottom: 33px;
+        border: none;
+        padding: 10px;
+    }
+
+    
+}
+
 @media screen and (max-width: 500px){
     .box1 {
         padding: 0px;
@@ -183,22 +201,4 @@ ul {
     .footer{
         padding:30px
     }
-}
-
-@media screen and (max-width: 770px){
-    .box1 {
-        width: 50%;;
-        margin-bottom: 10px;
-        padding: 0;
-        border: none;
-    }
-
-    .box2 {
-        width: 50%;
-        margin-bottom: 33px;
-        border: none;
-        padding: 0
-    }
-
-    
 }
