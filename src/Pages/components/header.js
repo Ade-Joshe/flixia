@@ -25,18 +25,39 @@ export default class Header extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      loginmodal: false,
+      signupmodal: false
     };
   }
+  
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+  
+  changeMe = (active) => {
+    this.toggle();
+    if(active == 'login'){
+      this.setState({
+        loginmodal: true,
+        signupmodal: false
+      })
+    }else {
+      this.setState({
+        signupmodal: true,
+        loginmodal: false
+      })
+    }
+  }
+  
   render() {
+    // console.log(LoginModal.state.email);
+
     const links = [{
         name: 'Explore',
-        link: '/explore'
+        link: '/'
       },
       {
         name: 'Movies',
@@ -63,13 +84,13 @@ export default class Header extends React.Component {
               <NavItem>
                 <NavLink href={item.link}><font className='smoke'>{item.name}</font></NavLink>
               </NavItem>))}
-                <LoginModal/>
-                <SignUpModal />
+                <LoginModal toggle={this.changeMe}/>
+                <SignUpModal toggle={this.changeMe}/>
               <UncontrolledDropdown nav inNavbar direction="down">
                 <DropdownToggle nav>
                   <Avatar />
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu right onClick={!this.state.isOpen}>
                 {dropdowns.map(item => (
                   <DropdownItem >
                     {item}
