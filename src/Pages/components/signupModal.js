@@ -12,22 +12,47 @@ const styles = {
 
 class SignUpModal extends Component {
 	state = {
-		open: false
-  };
+		open: false,
+		username: '',
+		email: '',
+		password: ''
+	};
 
-  onOpenModal = () => {
-    this.setState({ open: true });
-  };
+	onOpenModal = () => {
+		this.setState({ open: true });
+		this.props.toggle('signup');
+	};
 	
-  onCloseModal = () => {
-    this.setState({ open: false });
-  };
+	onCloseModal = () => {
+		this.setState({ open: false });
+	};
+
+
+	handleChange= event => {
+		this.setState({
+			[event.target.name]: event.target.value
+		})
+	}
+
+	handleSubmit= event => {
+		event.preventDefault();
+		let { username, email, password } = this.state;
+		const user = {username, email, password};
+
+		console.log(user);
+		// API.post(`/user/${user_id}`, { user })
+		// 	.then(res => {
+		// 	    console.log(res);
+		// 	    alert(res.data.message);
+		// 	})
+		// this.props.history.push('/movie');
+	}
 	
-  render() {
-    const { open } = this.state;
-    return (
-      <div style={styles}>
-				<p onClick={this.onOpenModal} className='trigger smoke'>SignUp</p>
+	render() {
+		const { open } = this.state;
+		return (
+		<div style={styles}>
+			<p onClick={this.onOpenModal} className='trigger smoke'>SignUp</p>
 				<Modal open={open} onClose={this.onCloseModal} center>
 					<div className="modal-body">		
 							<div className="modal-content" style={{paddingTop: '5%'}}>
@@ -39,20 +64,20 @@ class SignUpModal extends Component {
 							<form style={{display: 'contents'}}onSubmit={this.handleSubmit}>
 							<span style={{marginBottom: '20px'}}>
 								<Input iconPosition='left' placeholder='Enter Name' className="myInput">
-									<Icon name='user' />
-									<input />
+									<Icon name='user'/>
+									<input value={this.state.username} onChange={this.handleChange} name='username'/>
 								</Input> 
 								</span>							
 								<span>
 								<Input iconPosition='left' placeholder='Email' className="myInput">
 									<Icon name='at' />
-									<input />
+									<input value={this.state.email} onChange={this.handleChange} name='email'/>
 								</Input> 
 								</span>
 								<span><br />
 								<Input iconPosition='left' placeholder='Password'  className="myInput">
 									<Icon name='eye' />
-									<input type="password"/>
+									<input type="password" onChange={this.handleChange} value={this.state.password} name='password'/>
 								</Input>
 								</span>
 								<span className="modal-deet">
