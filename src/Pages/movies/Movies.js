@@ -4,7 +4,7 @@ import Header from '../components/header'
 import Footer from '../components/footer';
 import './Movies.css'
 import Cards from '../components/card';
-
+import MovieTab from '../components/movTab'
 
 const Movies = () => {
 return (
@@ -34,40 +34,7 @@ return (
         />
         <div className="container general">
             <h1>checkout our awesome personnels</h1>
-            <Cards 
-                data={[
-                    {
-                        key: new Date(),
-                        aUrl: '../components/end.jpg',
-                        title: 'the big bad wolf',
-                        descr: "the wolf was very bad"
-                    },
-                    {
-                        key: new Date(),
-                        aUrl: '../components/end.jpg',
-                        title: 'the big bad wolf',
-                        descr: "the wolf was very bad"
-                    },
-                    {
-                        key: new Date(),
-                        aUrl: '../components/end.jpg',
-                        title: 'the big bad wolf',
-                        descr: "the wolf was very bad"
-                    },
-                    {
-                        key: new Date(),
-                        aUrl: '../components/end.jpg',
-                        title: 'the big bad wolf',
-                        descr: "the wolf was very bad"
-                    },                    
-                    {
-                        key: new Date(),
-                        aUrl: '../components/end.jpg',
-                        title: 'the big bad wolf',
-                        descr: "the wolf was very bad"
-                    },
-                ]}
-            />
+            <MovieTab />
         </div>
         <Footer />
     </div>
