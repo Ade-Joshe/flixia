@@ -45,7 +45,7 @@ class CelebTab extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
-    const label = ['Action', 'Crime', 'Drama', 'Humor', 'Romance'];
+    const label = ['View All', 'Actors', 'Producers'];
 
     return (
       <div className={'movroot ' + classes.root}>
@@ -81,7 +81,7 @@ class CelebTab extends React.Component {
             index={this.state.value}
             onChangeIndex={this.handleChangeIndex}
             >
-                <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
+                <TabContainer dir={theme.direction}><GuttersGrid paperLink='/single_celebs'/></TabContainer>
                 <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
                 <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
                 <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
