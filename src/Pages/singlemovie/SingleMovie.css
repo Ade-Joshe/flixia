@@ -1,0 +1,37 @@
+.singleMoviehead {
+    width: 50%;
+     height: auto;
+     float: left;
+}
+
+.play {
+    width: 100%;
+    height:300px;
+    margin: auto;
+    margin-bottom: 60px;
+    padding: 10px
+}
+
+.moviedetail {
+    width: 50%;
+    height: auto;
+    float: left;
+    padding: 0px 20px
+}
+
+@media screen and (max-width: 500px){
+    .play{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .moviedetail{
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .singleMoviehead {
+        width: 100%
+    }
+}
