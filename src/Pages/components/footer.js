@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 import 'reactstrap'
 import './footer.css'
 import SearchBox from './search'
-
+import API from './api.js'
 
 const Footer = () => {
     return(
@@ -13,6 +13,7 @@ const Footer = () => {
                         <h1 className='smoke'> NMDb </h1>
                         <p className='smoke'>Nollywood Movie Database</p>
                         <p className="sign smoke"> &copy; Copyright 2018, All rights reserved </p>
+        {/* {console.log(API)} */}
                     </div>
                     <div className="box box2">
                         <div className="equal res-column">
@@ -47,6 +48,7 @@ const Footer = () => {
                             {/* <button className="btn btn-md btn-warning hidden">Subscribe</button> */}
                         </form>
                     </div>
+
                 </div>
             </div>
     )
