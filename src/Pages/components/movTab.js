@@ -18,23 +18,23 @@ const action = {
 
 
 function TabContainer({ children, dir }) {
-  return (
-    <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
-      {children}
-    </Typography>
-  );
+	return (
+		<Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
+			{children}
+		</Typography>
+	);
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  dir: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
+	dir: PropTypes.string.isRequired,
 };
 
 const styles = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper
-  }
-});
+	root: {
+		backgroundColor: theme.palette.background.paper
+	}
+	});
 
 class MovieTab extends React.Component {
   state = {
@@ -52,7 +52,13 @@ class MovieTab extends React.Component {
   render() {
     const { classes, theme } = this.props;
     const label = ['Action', 'Crime', 'Drama', 'Humor', 'Romance'];
-
+    const MovieAPI = [{
+          action: '',
+          drama: '',
+          crime: '',
+          humor: '',
+          romance: ''
+    }];
     return (
 
       <div className={'movroot ' + classes.root}>
@@ -69,17 +75,16 @@ class MovieTab extends React.Component {
             <Tab label={TabLabel} />
                 )}
           </Tabs>
-        {/* <LoginModal /> */}
         <div style={{ height: '50px', paddingTop: '9px', paddingLeft: '15px',  }}>
           <span> 
 			  <span className="action"></span>
             <span> {label[this.state.value]} </span>
           </span>
-            <span style={{float: 'right'}}> 
+            <span className='search'> 
               <SearchBox 
               float='right'
               placeholder='Search Movies Here'
-              width="40%"
+              width="70%"
               icon='search'
               />   </span>
         </div>
@@ -90,7 +95,7 @@ class MovieTab extends React.Component {
             index={this.state.value}
             onChangeIndex={this.handleChangeIndex}
             >
-                <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
+                <TabContainer dir={theme.direction}><GuttersGrid paperLink='/movies/singlemovie'/></TabContainer>
                 <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
                 <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
                 <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
