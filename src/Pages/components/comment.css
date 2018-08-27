@@ -6,7 +6,9 @@
     padding: 20px;
     background-color: black;
     border-radius: 8px;
-    float: left
+    float: left;
+    /* margin-top: 30px; */
+    margin-bottom: 30px
 }
 
 .commentAvatar {
@@ -18,11 +20,16 @@
     border-radius: 50%;
     position: relative;
     width: 33%;
-    margin-top: -63px
+    margin-top: -43px;
+    margin-bottom: -10px
 }
 
 .commentName {
     font-size: 1em;
+}
+
+.point {
+    cursor: pointer;
 }
 
 .commentDate {
@@ -38,9 +45,15 @@
     color: goldenrod;
     float: left;
 }
+
+.commentgroup {
+    margin-left: 5%;
+}
+
+
 @media screen and (max-width: 500px){
     .commentBody {
-        width: 100%;
+        width: 95%;
         margin: 33px 0 0 0;
     }
     
