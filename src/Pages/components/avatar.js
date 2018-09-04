@@ -1,10 +1,9 @@
 import React from 'react';
-import avatar from '../images/avatar.jpg'
 
-const Avatar = () => {
+const Avatar = props => {
     return(
         <div className="chip">
-            <img src={avatar} alt="Person" width="40" height="40" className='avatar' />
+            <img src={props.avatar} alt="Person" width="40" height="40" className='avatar' />
         </div>
     );
 }

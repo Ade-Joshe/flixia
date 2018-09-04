@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
 	root: {
 		flexGrow: 1,
+		marginTop: 80
 	},
 	paper: {
 		height: 315,
@@ -18,7 +19,7 @@ const styles = theme => ({
 		padding: theme.spacing.unit * 2,
 	},
 	paperImage: {
-		height: '85%',
+		height: '100%',
 		width: '100%',
 		borderRadius: '8',
 		marginBottom: '10px',
@@ -52,9 +53,9 @@ class GuttersGrid extends React.Component {
 
 		this.state = {
 			spacing: '40',
-			trailers: [],
-			filteredTrailer: [],
-			limit: 12
+			celebrities: [],
+			filteredCelebs: [],
+			// limit: 6
 		};
 		// this.onLoadMore = this.onLoadMore.bind(this)
 	}
@@ -62,8 +63,8 @@ class GuttersGrid extends React.Component {
 	componentDidMount() {
 		setTimeout(() => {
 			this.setState({
-				trailers: this.props.movie,
-				// filtered: this.state.trailers.splice(0, this.state.limit)
+				celebrities: this.props.movie,
+				// filtered: this.state.celebrities.splice(0, this.state.limit)
 			})
 		}, 3000);
 	}
@@ -71,37 +72,30 @@ class GuttersGrid extends React.Component {
 
 	render() {
 		const { classes } = this.props;
-		const { spacing, trailers, filteredTrailer } = this.state;
+		const { spacing, celebrities, filteredCelebs } = this.state;
 		return (
 			<Grid container className={classes.root} spacing={40}>
 				<Grid item xs={12}>
 					<Grid container className={classes.demo} justify="center" spacing={Number(spacing)}>
 						{
-							trailers &&
-							filteredTrailer.concat(trailers.splice(0, this.state.limit)).map((value, index) => (
+							celebrities &&
+							filteredCelebs.concat(celebrities.splice(0, celebrities.length).map((value, index) => (
 								<Grid key={index} item>
 									<Paper className={classes.paper}>
 										<div className={classes.paperImage}>
 											<Link to={{
-												pathname: `/movies/singlemovie/${value._id}`,
+												pathname: `/celeb/single_celebs/${value._id}`,
 												state: {
-													trailers: value.title
+													celebrities: value.title
 												},
 											}}>
-												<img src={value.trailerCover} className={classes.image} alt="" />
+												<img src={value.picture} className={classes.image} alt="" />
 											</Link>
-										</div>
-										<div>
-											<span style={{ fontWeight: 'bolder' }}>{value.title}</span> <br />
-											<span>
-												<h3 className="fa fa-star icon"> </h3>
-												<span className="" style={{ fontSize: '1rem', fontWeight: 'bolder' }}>{value.rating}</span>&nbsp;&nbsp;&nbsp;&nbsp;
-												<b className="fa fa-comments icon"></b> <span style={{ fontSize: '1rem', fontWeight: 'bolder' }}>{value.comments}</span>
-											</span>
 										</div>
 									</Paper>
 								</Grid>
-							))}
+							)))
+						}
 					</Grid>
 					{/* <div className='myloader'>
 						<button className='btn btn-md but' onClick={()=>this.onLoadMore()}> Load More &nbsp;&nbsp; <i className='fa fa-refresh'></i></button>
