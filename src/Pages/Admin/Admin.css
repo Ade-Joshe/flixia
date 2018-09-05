@@ -1,0 +1,107 @@
+.sideNavigation {
+    width: 15%;
+    background-color: darkgray;
+    height: 1028px;
+    float: left;
+}
+
+.AdminBody {
+    width: 100%;
+    height: 730px;
+}
+
+.adminHead {
+    background-color: darkgray;
+    height: 60px;
+    padding-top: 10px;
+    /* line-height:  */
+}
+
+.adminHead >span {
+    text-align: center;
+    color: whitesmoke;
+    /* line-height: 3rem */
+    color: gold
+}
+
+main {
+    padding: 6%;
+    float: left;
+    width: 85%
+}
+
+main > button {
+    margin-left: 10pc
+}
+
+
+.detailMedia > img {
+    width: 23%;
+    float: left;
+    /* position: absolute; */
+    height: 14pc;
+    margin-right: 10%;
+}
+
+textarea {
+    margin-bottom: 50px
+}
+
+.detailMedia > div:first-child {
+    padding-top: 30px;
+}
+.adminProf {
+    height: 170px;
+    width: 79%;
+    /* padding: 60px; */
+    margin: 0;
+    border: 1px solid darkgray;
+    /* position: relative; */
+    margin: auto;
+    margin: 20px 20px 60px 20px;
+}
+
+.adminProf > img {
+    width: 100%;
+    height: 100%;
+    /* margin-bottom: 5px */
+}
+.adminProf > h3 {
+    margin-top: 10px
+}
+
+.sidebardetails {
+    height: 205px;
+    width: 100%;
+    margin: 0;
+    border: 1px solid darkgray;
+    background-color: white
+}
+.sidebardetails > button {
+    width: 63%;
+    height: 22%;
+    margin-top: 7%;
+    margin-left: 18%;
+    color: goldenrod
+}
+
+.addCeleb> input {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 1px solid darkgray;
+}
+
+/* .addCeleb > input {
+
+} */
+
+.adminContentScreen {
+    margin-left: 7pc;
+    width: 93%;
+    height: auto;
+    top: 15pc;
+    padding: 30px;
+
+}
