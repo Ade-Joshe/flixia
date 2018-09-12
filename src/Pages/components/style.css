@@ -18,9 +18,23 @@
 }
 
 .trigger{
-    padding: 19px 0 0 13px;
-    cursor: pointer;
+    color: black;
+    margin-top: 14px;
+    margin-left: 13px;
+    margin-right: 10px;
+    background-color: #ffb01e;
 }
+
+.load {
+    fill: #ffb01e;
+    /* height: 90px; */
+    width: 11%;
+    position: fixed;
+    height: 23%;
+    bottom: 31%;
+    left: 42%;
+}
+
 
 .modal-content {
     text-align: center;
@@ -93,7 +107,7 @@
 }
 
 
-@media screen and (max-width:500px){
+@media screen and (max-width:350px){
     .modal-content{
         padding: 0;
         margin: 0;
@@ -119,4 +133,14 @@
     .styles_modal__gNwvD {
         width: 85%
     }
+
+    .load {
+        width: 53%;
+        
+    }
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: unset;
+    display: none
 }

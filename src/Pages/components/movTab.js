@@ -1,21 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import SwipeableViews from 'react-swipeable-views';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import GuttersGrid from './cardSet'
-// import LoginModal from './loginModal'
-import SearchBox from './search'
 import './moviestab.css'
-
-
-const action = {
-	paddingTop: 5
-}
-
+import axios from 'axios';
+import { NavLink } from 'react-router-dom'
+import ReactLoading from 'react-loading'
 
 function TabContainer({ children, dir }) {
 	return (
@@ -24,6 +17,7 @@ function TabContainer({ children, dir }) {
 		</Typography>
 	);
 }
+
 
 TabContainer.propTypes = {
 	children: PropTypes.node.isRequired,
@@ -34,82 +28,180 @@ const styles = theme => ({
 	root: {
 		backgroundColor: theme.palette.background.paper
 	}
-	});
+});
 
 class MovieTab extends React.Component {
-  state = {
-    value: 0,
-  };
-  
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
+	constructor(props) {
+		super(props);
 
-  handleChangeIndex = index => {
-    this.setState({ value: index });
-  };
+		this.state = {
+			value: 0,
+			label: [],
+			trailers: [],
+			loading: true,
+		};
+	}
 
-  render() {
-    const { classes, theme } = this.props;
-    const label = ['Action', 'Crime', 'Drama', 'Humor', 'Romance'];
-    const MovieAPI = [{
-          action: '',
-          drama: '',
-          crime: '',
-          humor: '',
-          romance: ''
-    }];
-    return (
+	componentWillMount() {
+		this.setState({
+			loading: true
+		})
+		axios.get('https://flixia.herokuapp.com/movieCategories')
+			.then(res => {
+				this.setState({
+					label: res.data
+				})
+				axios.get(`https://flixia.herokuapp.com/movieCategories/search?name=${this.state.label[0].name}`)
+					.then(res => {
+						this.setState({
+							trailers: res.data,
+							loading: false
+						})
+					})
+			})
+			console.log(this.state.trailers)
+	}
 
-      <div className={'movroot ' + classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={this.state.value}
-            onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            fullWidth
-          >
+	handleChange = (event, value) => {
+		this.setState({ value });
+	};
 
-         { label.map( TabLabel => 
-            <Tab label={TabLabel} />
-                )}
-          </Tabs>
-        <div style={{ height: '50px', paddingTop: '9px', paddingLeft: '15px',  }}>
-          <span> 
-			  <span className="action"></span>
-            <span> {label[this.state.value]} </span>
-          </span>
-            <span className='search'> 
-              <SearchBox 
-              float='right'
-              placeholder='Search Movies Here'
-              width="70%"
-              icon='search'
-              />   </span>
-        </div>
-        </AppBar>
-        <div className='movhide'>
-            <SwipeableViews
-            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-            index={this.state.value}
-            onChangeIndex={this.handleChangeIndex}
-            >
-                <TabContainer dir={theme.direction}><GuttersGrid paperLink='/movies/singlemovie'/></TabContainer>
-                <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
-                <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
-                <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
-                <TabContainer dir={theme.direction}><GuttersGrid /></TabContainer>
-            </SwipeableViews>
-        </div>
-      </div>
-    );
-  }
+	handleChangeIndex = index => {
+		this.setState({ value: index });
+	};
+
+
+	getCategoryName = name => {
+		this.setState({ trailers: [], loading: true })
+		axios.get(`https://flixia.herokuapp.com/movieCategories/search?name=${name}`)
+			.then(res => {
+				this.setState({
+					trailers: res.data,
+					loading: false
+				})
+			})
+	}
+
+
+	render() {
+		const { classes } = this.props;
+		let { label, value, trailers, loading } = this.state;
+		return (
+			<div>
+				<div className={'movroot ' + classes.root}>
+					<AppBar position="static" color="default">
+						<Tabs
+							value={value}
+							onChange={this.handleChange}
+							indicatorColor="primary"
+							textColor="primary"
+							scrollable
+							scrollButtons='auto'
+							fullWidth
+						>
+							{
+								label &&
+								label.map(name => {
+									return (
+										<Tab key={name._id} label={name.name} onClick={() => this.getCategoryName(name.name)} />
+									)
+								})
+							}
+						</Tabs>
+						<div style={{ height: '50px', paddingTop: '9px', paddingLeft: '15px', }}>
+							<span>
+								<span className="action"></span>
+								{/* <span> {label.name[this.state.value]} </span> */}
+							</span>
+						</div>
+					</AppBar>
+					{
+						loading &&
+						<div className='bigscreen'>
+							<ReactLoading type='bars' color='gold' width='30%' height='40%' />
+						</div>
+					}
+
+
+				</div>
+				<div className='movhide'>
+
+
+					{/* // value === label[value] && */}
+					<div className='trend' >
+						<span></span>
+
+
+						{/* {
+							(
+								trailers &&
+								<div>
+									<NavLink to={`/movies/singlemovie/${trailers._id}`}><img src={trailers.trailerCover} alt='' key={trailers._id} style={{ width: '100%' }} /></NavLink>
+								</div>
+							)
+						} */}
+
+
+
+						{
+							trailers &&
+							trailers.map((item) => {
+								return (
+									<div key={item._id}>
+										<NavLink to={`/movies/singlemovie/${item._id}`}><img src={item.trailerCover} alt='' key={item._id} style={{ width: '100%' }} /></NavLink>
+									</div>
+								)
+							})
+						}
+
+					</div>
+
+					{/* <div className='moredeet'>{item.title}</div> */}
+					{/* {
+						value === 1 &&
+						<div className='trend' >
+						<span></span>
+
+							{
+								trailers &&
+								trailers.slice(0, 11).map((item) => {
+									return (
+										<div key={item._id}>
+											<NavLink to={`/movies/singlemovie/${item._id}`}><img src={item.trailerCover} alt='' key={item._id} style={{ width: '100%' }} /></NavLink>
+										</div>
+									)
+								})
+							}
+
+
+						</div>
+					}
+					{
+						value === 2 &&
+						<div className='trend' >
+
+							{
+								trailers &&
+								trailers.slice(0, 11).map((item) => {
+									return (
+										<div key={item._id}>
+											<NavLink to={`/movies/singlemovie/${item._id}`}><img src={item.trailerCover} alt='' key={item._id} style={{ width: '100%' }} /></NavLink>
+										</div>
+									)
+								})
+							}
+						</div>
+					} */}
+				</div>
+			</div>
+		);
+	}
 }
 
-MovieTab.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+
+MovieTab.PropTypes = {
+	classes: PropTypes.object.isRequired,
+	theme: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(MovieTab);

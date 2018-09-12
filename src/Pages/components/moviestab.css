@@ -6,13 +6,22 @@
 
 .movhide {
     overflow-x: hidden;
-    width: 100%;
-    margin: auto auto auto auto;
+    width: 90%;
+    margin: 30px 5%;
 }
 
 .search {
     float: right;
     width: 50%;
+}
+
+.active {
+    background-color: unset;
+}
+
+.movietab {
+    margin-top: -52px;
+    position: relative
 }
 
 @media screen and (max-width: 770px) {
@@ -21,12 +30,13 @@
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 350px){
     .movroot {
         width: 97%;
     }
 
     .movietab {
-        margin-top: -178px;
+        /* margin-top: -75px; */
+        margin-top: 0px;
     }
 }

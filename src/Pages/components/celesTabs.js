@@ -5,7 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-// import GuttersGrid from './celebcards'
 import ReactLoading from 'react-loading';
 import './moviestab.css'
 import axios from 'axios'
@@ -55,11 +54,9 @@ class CelebTab extends React.Component {
 				axios.get(`https://flixia.herokuapp.com/celebrities/search?roles=${this.state.label[0]._id}`)
 					.then(res => {
 						console.log(this.state.label[0]._id);
-						// console.log(res)
 						this.setState({
 							celebrities: res.data,
 							loading: false
-							
 						})
 					})
 
@@ -92,7 +89,7 @@ class CelebTab extends React.Component {
 	}
 
 	render() {
-		const { classes, theme } = this.props;
+		const { classes } = this.props;
 		let { label, celebrities, value, loading } = this.state;
 		// const label = ['View All', 'Actors', 'Producers'];
 		return (
@@ -131,10 +128,10 @@ class CelebTab extends React.Component {
 
 						{
 							celebrities &&
-							celebrities.slice(0, 10).map((item) => {
+							celebrities.map((item) => {
 								return (
 									<div key={item._id}>
-										<NavLink to={`/celebs/single_celebs/${item._id}`}><img src={item.picture} alt='' key={item._id} style={{ width: '100%' }} /></NavLink>
+										<NavLink to={`/celebs/single_celebs/${item._id}`}><img src={item.thumbnail} alt='' key={item._id} style={{ width: '100%' }} /></NavLink>
 										{/* <div className='moredeet'>{item.title}</div> */}
 									</div>
 								)

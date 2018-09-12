@@ -1,5 +1,4 @@
-import axios from 'axios'
 
-export default axios.create({
-    baseURL: 'https://flixia.herokuapp.com/'
-});
+const baseURL = 'https://flixia.herokuapp.com';
+
+export default baseURL;

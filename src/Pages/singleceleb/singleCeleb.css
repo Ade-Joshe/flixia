@@ -1,10 +1,15 @@
-.body{
-    
-}
-
+/* @import url(path); */
+/* .background {
+    max-height: 705px;
+    width: 50%;
+    height: 705px;
+    position: absolute;
+    min-height: 581px;
+} */
+/* @import img1  */
 .parallax {
     /* The image used */
-    background-image: url("../images/img_parallax.jpg");
+    /* background-image: url("../images/img_parallax.jpg"); */
     
     /* Set a specific height */
     min-height: 500px; 
@@ -14,6 +19,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+a {
+    color: black
 }
 
 .big-celeb-body {
@@ -30,11 +39,12 @@
 
 .celebDescription {
     color: whitesmoke;
-    width: 40%;
-    height: auto;
+    width: 50%;
+    height: 35pc;
     float: right;
     background-color: rgba(0,0,0, 0.6);
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    position: relative
 }
 
 .biodescrip {
@@ -54,7 +64,7 @@
         height: auto;
         float: right;
         margin-block-end: auto;
-        margin-top: 285px;
+        margin-top: -4px;
         background-color: rgba(0,0,0, 0.7);
         }
 
@@ -66,7 +76,7 @@
     .celeb_achievements{
         float: left;
         padding: 30px;
-        margin-top: 200px;
+        margin-top: 0px;
         background-color: rgba(0,0,0, 0.6);
         color: whitesmoke;
     }
@@ -94,7 +104,8 @@
     .Tvshows {
         float: left;
         min-width: 100%;
-        margin-top: 30px
+        margin-top: 30px;
+        padding-left: 0px
     }
 }
 
@@ -119,6 +130,7 @@
     background-color: rgba(0,0,0, 0.6);
     width: 100%;
     color: whitesmoke;
+    position: relative
 }
 
 .actedMovies{
@@ -133,6 +145,7 @@
 .Tvshows {
     float: right;
     width: 50%;
+    padding-left: 0px;
 }
 
 .celebBio {

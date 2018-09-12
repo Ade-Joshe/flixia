@@ -1,5 +1,5 @@
 .general {
-    padding-top: 64px;
+    padding-top: 63px;
     overflow: hidden;
 }
 
@@ -7,7 +7,7 @@ p {
     margin: 0
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 350px){
     .general {
         padding-top: 50px 
     }
@@ -16,4 +16,13 @@ p {
 .searchText{
     width: 100%;
     padding-right: 7px;
+}
+
+* {
+    font-family: 'segoe ui';
+}
+
+
+.trigger {
+    font-weight: bolder;
 }

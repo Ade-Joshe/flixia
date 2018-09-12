@@ -4,7 +4,8 @@
     width: 100%;
     bottom:0;
     width:100%;
-    padding-top: 30px;
+    padding-top: 60px;
+    /* padding-top: 30px; */
     padding-right: 45px;
     box-sizing: border-box;
     bottom:0; 
@@ -136,7 +137,18 @@ ul {
 }
 
 
+.footer {
+    position: relative;
+}
+
 @media screen and (max-width: 770px){
+    .navbar-light, .navbar-toggler {
+        border-color: #ffb01e
+    }
+
+    .navbar-toggler-icon {
+        background-color: #ffb01e;
+    }
     .box1 {
         width: 50%;;
         margin-bottom: 10px;
@@ -154,7 +166,7 @@ ul {
     
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 350px){
     .box1 {
         padding: 0px;
         width: 100%;
@@ -164,6 +176,9 @@ ul {
         margin: auto
     }
 
+    /* .footer {
+        margin-top: 30px
+    } */
     .dem {
         width: 100%;
         border: none;
@@ -192,7 +207,7 @@ ul {
     }
 
     .head{
-        height: 50px;
+        height: 54px;
         line-height: 2.5em 
     }
     .general {

@@ -1,44 +1,21 @@
 import React from 'react';
-import '../general_style.css'
-import Header from '../components/header'
-import Footer from '../components/footer';
-import './Movies.css'
-import Cards from '../components/card';
-import MovieTab from '../components/movTab'
+import '../general_style.css';
+import './Movies.css';
+import MovieTab from '../components/movTab';
+import Slide from '../components/slideshow';
+// import Search from '../components/search'
 
 const Movies = () => {
-return (
-    <div>
-        <Header 
-            logo="Best"
-        // the data represents the header data and their routes link
-        // please check the app.js to make sure the link exists in the 
-        // Routing file
-            data={[
-                {
-                    key: new Date(),
-                    name: 'Contact',
-                    link: '/contact'
-                },
-                {
-                    key: new Date(),
-                    name: 'About',
-                    link: '/about'
-                },
-                {
-                    key: new Date(),
-                    name: 'Home',
-                    link: '/'
-                }
-            ]}
-        />
-        <div className="container general">
-            <h1>checkout our awesome personnels</h1>
-            <MovieTab />
+    return (
+        <div style={{ height: '100%' }}>
+            <div className="bighead general"  style={{paddingTop: 0}}>
+                <Slide />
+            </div>
+            <div className='movietab'>
+                <MovieTab />
+            </div>
         </div>
-        <Footer />
-    </div>
-)
+    )
 }
 
 export default Movies;

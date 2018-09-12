@@ -1,11 +1,15 @@
 @media screen and (max-width: 770px){
     .navbar-collapse {
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.9);
+        margin-top: -1%;
     }
 
     .trigger {
-        padding: 35px 0 0 0;
-        float: left 
+        padding: 0;
+        float: left ;
+        margin-top: 21px;
+        margin-left: -2px;
+        color: black;
     }
 
     .movroot{
@@ -13,6 +17,51 @@
     }
 }
 
+.trigger{
+    color: black
+}
+
+
+.trigger {
+    font-weight: bolder;
+    color: black
+}
+
+@media screen and (max-width: 350px){
+    .headerlogo{
+        visibility: hidden;
+    }
+
+    .headerlogo1 {
+        visibility: inherit;
+    }
+
+    .trigger{
+        margin-left: -2px;
+        padding: 0px;
+        color: black
+    }
+}
+
+.headerlogo {
+    width: 50px;
+    margin-left: 40px;
+    visibility: inherit;
+}
+
+.headerlogo1 {
+    width: 50px;
+    margin-left: 40px;
+    visibility: hidden;
+}
+
+.headerlogo:hover {
+    visibility: hidden;
+}
+
+.headerlogo1:hover {
+    visibility: inherit;
+}
 
 .navbar-nav {
     float: right;
@@ -33,18 +82,18 @@
     color: #d4d2b1
 }
 
-.smoke:hover {
-    color: white
+.trigger:hover {
+    color: black
 }
 
-.smoke:active{
-    color: gold;
+.smoke:visited{
+    color: #fae1b4;
 }
 
 .avatar {
-    height: 25px;
-    width: 25px;
-    background-color: gold;
+    height: 40px;
+    width: 40px;
+    background-color: #ffb01e;
     border-radius: 50%;
     display: inline-block;
 }
