@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import './searchbox.css';
 import { withRouter } from 'react-router-dom';
-// import spinner from '../images/spinner.gif';
 import ReactLoading from 'react-loading';
 
 
@@ -44,11 +42,7 @@ class Search extends Component {
 					searchResults: data,
 					loading: false
 				})
-				// console.log(data[0].title)
 			})
-		// .catch(err => {
-		// 	console.log(err)
-		// })
 	}
 
 	handleRender(title) {
@@ -93,31 +87,31 @@ class Search extends Component {
 	}
 
 
-
-
-
 	render() {
 		let { loading, searchQuery } = this.state;
 		return (
-			<div style={{margin: 'auto', width: '60%'}}>
+			<div style={{ margin: 'auto', width: '60%' }}>
 				<form onSubmit={(e) => e.preventDefault()} className='searchForm'>
 					<h1 className='searchLabel' > The world's most popular and authoritative <br />
 						source for Movie, TV and Celebrity content </h1>
-					<div style={{margin: 'auto', width: '65%'}}>
-						<input value={searchQuery} onChange={this.handleChange} className="searchie" type="search" placeholder="Search Movie here" />
-						<i className='fa fa-search licon'></i>
+
+					<div className="input-group mb-3" style={{ margin: 'auto', width: '70%', height: 40 }}>
+						<input value={searchQuery} onChange={this.handleChange} ref='search suggestion' style={{height: 'auto'}}className="searchie form-control" type="search" placeholder="Search Movie here" />
+						<div className="input-group-append" >
+							<span className="input-group-text fa fa-search" id="basic-addon2" style={{ paddingTop: 12, backgroundColor: '#ffb01e', width: '3pc' }}></span>
+						</div>
 						{this.renderSearch()}
-
-
-						{loading &&
-							<div className='resultsearch'>
-								{/* <img alt="spinner" src={spinner} /> */}
-								<ReactLoading type='bars' color='gold' height='40%' width='30%' />
-							</div>
-						}
 					</div>
+
+					{
+						loading &&
+						<div className='resultsearch'>
+							<ReactLoading type='bars' color='#ffb01e' height='40%' width='30%' />
+						</div>
+					}
+					{/* </div> */}
 				</form>
-			</div>
+			</div >
 		);
 	}
 }

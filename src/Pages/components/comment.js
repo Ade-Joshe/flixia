@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import prophoto from '../images/avatar.jpg'
-import './comment.css';
 
 console.clear();
 

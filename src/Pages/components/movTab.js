@@ -5,7 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import './moviestab.css'
 import axios from 'axios';
 import { NavLink } from 'react-router-dom'
 import ReactLoading from 'react-loading'
@@ -59,7 +58,7 @@ class MovieTab extends React.Component {
 						})
 					})
 			})
-			console.log(this.state.trailers)
+		console.log(this.state.trailers)
 	}
 
 	handleChange = (event, value) => {
@@ -108,17 +107,16 @@ class MovieTab extends React.Component {
 								})
 							}
 						</Tabs>
-						<div style={{ height: '50px', paddingTop: '9px', paddingLeft: '15px', }}>
+						<div>
 							<span>
 								<span className="action"></span>
-								{/* <span> {label.name[this.state.value]} </span> */}
 							</span>
 						</div>
 					</AppBar>
 					{
 						loading &&
 						<div className='bigscreen'>
-							<ReactLoading type='bars' color='gold' width='30%' height='40%' />
+							<ReactLoading type='bars' color='#ffb01e' width='30%' height='40%' />
 						</div>
 					}
 
@@ -127,21 +125,8 @@ class MovieTab extends React.Component {
 				<div className='movhide'>
 
 
-					{/* // value === label[value] && */}
 					<div className='trend' >
 						<span></span>
-
-
-						{/* {
-							(
-								trailers &&
-								<div>
-									<NavLink to={`/movies/singlemovie/${trailers._id}`}><img src={trailers.trailerCover} alt='' key={trailers._id} style={{ width: '100%' }} /></NavLink>
-								</div>
-							)
-						} */}
-
-
 
 						{
 							trailers &&
@@ -155,43 +140,6 @@ class MovieTab extends React.Component {
 						}
 
 					</div>
-
-					{/* <div className='moredeet'>{item.title}</div> */}
-					{/* {
-						value === 1 &&
-						<div className='trend' >
-						<span></span>
-
-							{
-								trailers &&
-								trailers.slice(0, 11).map((item) => {
-									return (
-										<div key={item._id}>
-											<NavLink to={`/movies/singlemovie/${item._id}`}><img src={item.trailerCover} alt='' key={item._id} style={{ width: '100%' }} /></NavLink>
-										</div>
-									)
-								})
-							}
-
-
-						</div>
-					}
-					{
-						value === 2 &&
-						<div className='trend' >
-
-							{
-								trailers &&
-								trailers.slice(0, 11).map((item) => {
-									return (
-										<div key={item._id}>
-											<NavLink to={`/movies/singlemovie/${item._id}`}><img src={item.trailerCover} alt='' key={item._id} style={{ width: '100%' }} /></NavLink>
-										</div>
-									)
-								})
-							}
-						</div>
-					} */}
 				</div>
 			</div>
 		);

@@ -5,10 +5,9 @@ import {
 	CarouselItem,
 	CarouselControl,
 	CarouselIndicators,
-	// CarouselCaption,
 } from 'reactstrap';
+
 import img1 from '../images/banana.jpg';
-import './slideshow.css'
 import img3 from '../images/france.jpg';
 import img4 from '../images/seven.jpg';
 import img5 from '../images/prayed.jpg';

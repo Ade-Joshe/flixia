@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import './Admin.css';
-// import Avatar from '../components/avatar';
 import profile from '../images/avatar.jpg'
-import banana from '../images/banana.jpg'
 
 class AdminHome extends Component {
     constructor(props) {

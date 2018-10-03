@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './style.css'
 import Modal from "react-responsive-modal";
 import { Icon, Input } from 'semantic-ui-react';
 import axios from 'axios'
@@ -43,7 +42,7 @@ class LoginModal extends Component {
 		})
 		event.preventDefault();
 		let { email, password } = this.state;
-		const user = { email, password };
+		const user = { email, password};
 
 		axios.post(`${baseUrl}/users/login`, user)
 			.then(res => {
@@ -61,7 +60,7 @@ class LoginModal extends Component {
 					alert(res.data.message)
 				}
 			})
-}
+	}
 
 	render() {
 		const { open, loading } = this.state;

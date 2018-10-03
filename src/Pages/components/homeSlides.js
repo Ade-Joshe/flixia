@@ -11,7 +11,6 @@ import img3 from '../images/france.jpg';
 import img4 from '../images/seven.jpg';
 import img5 from '../images/prayed.jpg';
 import img6 from '../images/sidechick.jpg'
-import './slideshow.css'
 
 
 const items = [
@@ -109,9 +108,6 @@ class HomeSlide extends Component {
                     <img src={item.src} alt={item.altText} style={{ width: '100%' }} />
             <div className='thelay'>
             </div>
-                    {/* <div style={{marginTop: -50}}> */}
-                    {/* <CarouselCaption captionText={item.caption} captionHeader={item.caption} /> */}
-                    {/* </div> */}
                 </CarouselItem>
             );
         });
@@ -139,9 +135,6 @@ Carousel.propTypes = {
     previous: PropTypes.func.isRequired,   // a function which should advance the carousel to the previous slide (via activeIndex)
     keyboard: PropTypes.bool,    // controls if the left and right arrow keys should control the carousel
 
-	/* If set to "hover", pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on
-    * mouseleave. If set to false, hovering over the carousel won't pause it. (default: "hover")
-    */
 
     pause: PropTypes.oneOf(['hover', false]), 	// Autoplays the carousel after the user manually cycles the first item. If "carousel", autoplays the carousel on load.
     ride: PropTypes.oneOf(['carousel']),   // This is how bootstrap defines it... I would prefer a bool named autoplay or something...

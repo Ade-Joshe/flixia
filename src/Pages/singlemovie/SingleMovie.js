@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import { Player, VolumeMenuButton, LoadingSpinner, ReplayControl, ControlBar, PlayToggle, BigPlayButton } from 'video-react';
 import ForwardControl from 'video-react/lib/components/control-bar/ForwardControl';
 import CommentComp from '../components/comment'
-import './SingleMovie.css'
 import axios from 'axios'
-// import { watch } from 'fs';
-// import { watch } from 'fs';
-// import { watch } from 'fs';
 import ReactLoading from 'react-loading';
 
 
@@ -28,7 +24,6 @@ class SingleMovie extends Component {
         const title = this.props.match.params.id;
         axios.get(`https://flixia.herokuapp.com/trailers/search?_id=${title}`)
             .then(res => {
-                // console.log(movie, res.data)
                 this.setState({
                     watchMovie: res.data[0],
                     loading: false,
@@ -41,8 +36,7 @@ class SingleMovie extends Component {
     render() {
         const { watchMovie, loading, id } = this.state;
         let budget;
-        (watchMovie.budget !== undefined ) ?  budget = watchMovie.budget.toLocaleString() : null;
-        // const year = this.state.watchMovie.releaseDate.toString().splice(0,4);
+        (watchMovie.budget !== undefined) ? budget = watchMovie.budget.toLocaleString() : null;
         return (
             <div>
                 <div className='singleMovieBody general'>
@@ -54,7 +48,6 @@ class SingleMovie extends Component {
                                     poster={watchMovie.trailerCover}
                                     src={watchMovie.trailerVideo}
                                 >
-                                    {/* <source src={watchMovie.trailerVideo} /> */}
                                     <LoadingSpinner />
                                     <BigPlayButton position="center" />
                                     <ControlBar autoHide={false} disableDefaultControls={false}>
@@ -77,22 +70,16 @@ class SingleMovie extends Component {
 
                         <div className='moviedetail' >
                             <h1><b>{watchMovie.title}</b><small className='small'>{}</small></h1>
-                            <p>categories: 
+                            <p>categories:
                             {
-                                watchMovie.categories ? watchMovie.categories.name : <span> no result for this category</span>
-                            }
-                            {/* {watchMovie.categories.map(item => {
-                                return (
-                                    <span>{item.name}</span>
-                                )
-                            })}&nbsp;&nbsp;&nbsp; */}
+                                    watchMovie.categories ? watchMovie.categories.name : <span> Not available</span>
+                                }
                             </p>
                             <br /><br />
                             <font>
                                 {watchMovie.description}
                             </font>
 
-                            {/* <div className='ratingSomething'> <buttom> Submit </buttom></div> */}
                         </div>
                         <div className='singlemovieBody'>
                             <span><a href='#plot'> FULL PLOT </a></span>
@@ -123,7 +110,7 @@ class SingleMovie extends Component {
                                 <p> <b>Production Company:</b>  {watchMovie.productionCompany}</p>
                             </div>
                             <div>
-                                <p><b> Budget:</b> { (watchMovie.budget !== undefined)  ? budget : <span>not available</span>}</p>
+                                <p><b> Budget:</b> {(watchMovie.budget !== undefined) ? budget : <span>not available</span>}</p>
                             </div>
                         </div><br /><hr />
                         <div className='cast' id='cast'>
@@ -131,34 +118,22 @@ class SingleMovie extends Component {
                             <span>
 
                                 {
-                                    watchMovie.cast ? watchMovie.cast : <span> No Result for this field </span>
+                                    watchMovie.cast ? watchMovie.cast : <span> Not available </span>
                                 }
                             </span>
                         </div><hr />
                         <div className='awards' id='award'>
                             <h2><b>AWARDS</b></h2>
                             {
-                                watchMovie.awards ? watchMovie.awards : <span> No Result for this field </span>
+                                watchMovie.awards ? watchMovie.awards : <span> Not available </span>
                             }
 
                         </div>< hr />
                         <div className='photos' id='photo'>
                             <h2><b>PHOTOS</b></h2>
                             {
-                                watchMovie.photos ? watchMovie.photos : <span> No Result for this field </span>
+                                watchMovie.photos ? watchMovie.photos : <span> Not available </span>
                             }
-
-                            {/* {
-                                watchMovie &&
-                                watchMovie.slice(0, 5).map((item) => {
-                                    return (
-                                        <div key={item._id} className='photos'>
-                                            <NavLink to={`/celebs/single_celebs/${item._id}`}><img src={item.picture} alt='' key={item._id} style={{ width: '20%' }} /></NavLink>
-                                        </div>
-                                    )
-                                })
-                            } */}
-
                         </div><hr />
                     </div>
                 </div>

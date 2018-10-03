@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './style.css'
 import Modal from "react-responsive-modal";
 import { Icon, Input } from 'semantic-ui-react';
 import baseUrl from '../components/api'

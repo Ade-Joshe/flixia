@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import MainLayout from "./MainLayout";
 import AdminLayout from './AdminLayout'
 import { BrowserRouter as Router, Route } from 'react-router-dom';

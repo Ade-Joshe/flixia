@@ -1,9 +1,6 @@
 import React from 'react';
 import '../general_style.css'
-// import Header from '../components/header'
-// import Footer from '../components/footer';
 import Cards from '../components/card';
-import "./FAQ.css"
 
 
 const FAQ = () => {

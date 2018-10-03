@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import profile from '../images/avatar.jpg'
-import './Admin.css'
 
 
 class AddVideos extends Component {

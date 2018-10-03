@@ -1,12 +1,8 @@
-import './header.css'
 import Avatar from './avatar'
 import avatarURL from '../images/avatar.jpg'
 import logo from '../images/flix1.png';
 import logo1 from '../images/flix2.png';
-// import logo2 from '../images/flixia1.png';
-// import logo3 from '../images/flixia2.png';
 import { NavLink } from 'react-router-dom';
-// import Search from './searchbox';
 import React from 'react';
 import {
 	Collapse,

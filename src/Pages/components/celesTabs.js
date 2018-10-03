@@ -6,8 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import ReactLoading from 'react-loading';
-import './moviestab.css'
 import axios from 'axios'
+
 import { NavLink } from 'react-router-dom'
 
 function TabContainer({ children, dir }) {
@@ -91,7 +91,6 @@ class CelebTab extends React.Component {
 	render() {
 		const { classes } = this.props;
 		let { label, celebrities, value, loading } = this.state;
-		// const label = ['View All', 'Actors', 'Producers'];
 		return (
 			<div>
 				<div className={'movroot ' + classes.root}>
@@ -107,7 +106,7 @@ class CelebTab extends React.Component {
 								<Tab label={TabLabel.rolename} key={TabLabel._id} onClick={() => this.getCelebrityName(TabLabel._id)} />
 							)}
 						</Tabs>
-						<div style={{ height: '50px', paddingTop: '9px', paddingLeft: '15px', }}>
+						<div>
 							<p>
 								{/* <span className="action"></span> */}
 							</p>
@@ -118,8 +117,8 @@ class CelebTab extends React.Component {
 
 					{
 						loading &&
-						<div className='load'>
-							<ReactLoading type='bars' color='gold' width='30%' height='90px' />
+						<div className='bigscreen'>
+							<ReactLoading type='bars' color='gold' width='30%' height='40%' />
 						</div>
 					}
 

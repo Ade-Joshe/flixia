@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './singleCeleb.css';
 import '../general_style.css'
 import Axios from 'axios';
 import baseURL from '../components/api'

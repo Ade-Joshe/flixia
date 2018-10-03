@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import './style.css'
 import Modal from "react-responsive-modal";
-import { Icon, Input } from 'semantic-ui-react';
 import axios from 'axios'
 import baseUrl from './api'
 import PropTypes from "prop-types";
-import ReactLoading from 'react-loading';
 
 const styles = {
 	fontFamily: "sans-serif",
@@ -63,7 +60,7 @@ class ReviewModal extends Component {
 				<button onClick={this.onOpenModal} className='btn btn-lg rss' ><i className='fa fa-rss-square'></i></button>
 				<Modal open={open} onClose={this.onCloseModal} center>
 					<div style={{height: 320}}>
-						<div className="modal-content" onClick={this.isOpen}>
+						<div className="modal-content" onClick={this.isOpen} style={{ border: 'none' }}>
 							<form onSubmit={this.handleSubmit} >
 								<h3 style={{ marginTop: 30}}>What do you think we should do to make this application better </h3>
 								<textarea onChange={this.handleChange} style={{ height: '113px', width: '90%' }} placeholder='Enter review here' name='content' value={content}>
@@ -73,7 +70,7 @@ class ReviewModal extends Component {
 
 						</div>
 					</div>
-					<p> Reviews are collected annonymously</p>
+					<p> Reviews are collected anonymously</p>
 				</Modal>
 			</div>
 		);
