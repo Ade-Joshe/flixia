@@ -3,3 +3,1396 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  display: none;
+  visibility: hidden;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.sliderContainer{
+  height: 100vh;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mern{
+  padding-top: 17px;
+  background-color: rgb(255, 176, 30);
+  width: 4pc;
+  height: 60px;
+}
+
+.sideNavigation {
+  width: 15%;
+  background-color: darkgray;
+  height: 1028px;
+  float: left;
+}
+
+.AdminBody {
+  width: 100%;
+  height: 730px;
+}
+
+.adminHead {
+  background-color: darkgray;
+  height: 60px;
+  padding-top: 10px;
+  /* line-height:  */
+}
+
+.adminHead >span {
+  text-align: center;
+  color: whitesmoke;
+  color: #ffb01e
+}
+
+main {
+  padding: 6%;
+  float: left;
+  width: 85%
+}
+
+main > button {
+  margin-left: 10pc
+}
+
+
+.detailMedia > img {
+  width: 23%;
+  float: left;
+  height: 14pc;
+  margin-right: 10%;
+}
+
+textarea {
+  margin-bottom: 50px
+}
+
+.detailMedia > div:first-child {
+  padding-top: 30px;
+}
+
+.adminProf {
+  height: 170px;
+  width: 79%;
+  margin: 0;
+  border: 1px solid darkgray;
+  margin: auto;
+  margin: 20px 20px 60px 20px;
+}
+
+.adminProf > img {
+  width: 100%;
+  height: 100%;
+}
+
+.adminProf > h3 {
+  margin-top: 10px
+}
+
+.sidebardetails {
+  height: 205px;
+  width: 100%;
+  margin: 0;
+  border: 1px solid darkgray;
+  background-color: white
+}
+.sidebardetails > button {
+  width: 63%;
+  height: 22%;
+  margin-top: 7%;
+  margin-left: 18%;
+  color: #ffb01e;
+}
+
+.addCeleb> input {
+  width: 80%;
+  height: 40px;
+  margin-bottom: 30px;
+  padding: 5px;
+  border: 1px solid darkgray;
+}
+
+
+.adminContentScreen {
+  margin-left: 7pc;
+  width: 93%;
+  height: auto;
+  top: 15pc;
+  padding: 30px;
+
+}
+
+
+.homeTrendingMovies1 {
+  height: 100%;
+  width: 37%;
+  float: left;
+  border: 1px solid darkgray;
+}
+
+
+
+.homeTrendingMovies2 {
+  height: 350px;
+  width: 20%;
+  float: left;
+  border: 1px solid darkgray;
+  margin-left: 1%
+}
+
+.homebody {
+  padding:30px;
+  height: auto
+}
+
+
+.bigscreen {
+  left: 40%; 
+  position: fixed;
+  width: 52%;
+  margin-top: -240px;
+}
+
+hr {
+  width: 95%
+}
+
+img {
+  height: 100%;
+  width: 100%
+}
+
+
+.seemore {
+  margin: 10px 0 0 2.5%;
+}
+
+.trending {
+  display: inline-flex;
+  height: 230px;
+  margin-left: 2.5%;
+  width: 95%;
+  margin-top: 2%
+}
+
+.shortnotif {
+  width: 95%;
+  margin: 5px 2.5%;
+  background-color: darkgray;
+  padding: 30px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.brandNew {
+  width: 32.68%;
+  border: 1px solid darkgray;
+}
+
+.rmpad {
+  margin-left: 1%
+}
+
+.celebfocus {
+  width: 50%;
+  border-right: 1px solid darkgray;
+  display: inline-flex;
+}
+
+.celebfocus > div {
+  border: 1px solid darkgray;
+}
+
+.twindiv {
+  height: 47.7%;
+  width: 47.7%;
+  margin: 0 0 2% 2%;
+}
+
+.celebday {
+  width: 50%;
+  display: contents;
+}
+
+.headerfont {
+  font-weight: bolder;
+  font-size: 1.4em;
+  margin-left: 30px
+}
+
+.trendbirthday {
+  width:50%
+}
+
+.item1 {
+  width: 39%
+}
+
+.trend > div {
+  height: 300px;
+  width: 19%;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid darkgrey;
+  box-shadow: 8px 3px 27px -7px rgba(0,0,0,0.8);
+}
+
+.trend > div:first-child {
+  width: 39%
+}
+
+.trend > div:first-child:hover {
+  width: 40%;
+}
+
+.trend > div:hover, .celeb > div:hover {
+  height: 320px;
+  width: 20%;
+  margin-top: 10px;
+  border: 1px solid #ffb01e;
+  box-shadow: 8px 3px 27px -7px rgba(0,0,0,0.8);
+  animation: mymove 5s infinite;
+}
+
+.trend {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.celeb {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap
+  /* d */
+}
+
+.celeb > div {
+  width: 19%;
+  height: 300px;
+  border: 1px solid darkgrey;
+  margin-top: 20px;
+  justify-content: space-between;
+  box-shadow: 8px 3px 27px -7px rgba(0,0,0,0.8);
+}
+
+.birthday {
+  display: flex;
+  justify-content: space-between;
+}
+
+.birthday > div {
+  width: 46%;
+  height: 200px;
+  border: 1px solid darkgrey;
+}
+
+.moredeet {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  margin-top: -18.6pc;
+}
+
+
+.moredeet:hover {
+  height: 105%;
+  width: 105%
+}
+.moredetail {
+  width: 100%;
+  height: 18%;
+  background-color: darkgray;
+  margin-top: 48.5%;
+}
+
+.searchForm {
+   margin-top: -20pc
+}
+
+.rss {
+  position: fixed;
+  bottom: 1pc;
+  right: 1pc;
+  background-color: rgb(255, 176, 30);
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 8px 22px 4px;
+}
+
+
+.body{
+   width: 90%;
+      margin: 40px 5% 30px 5%;
+}
+
+
+.searchie {
+  width: 39%;
+  margin-left: 0%;
+  position: absolute;
+  margin-top: 0%;
+  -webkit-box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.7);
+  box-shadow: 0px 4px 47px 3px rgba(0,0,0,0.7);
+  border-radius: 8px;
+  padding: 15px;
+  font-weight: bolder;
+  height: 50px;
+}
+
+.background{
+  width: 100%
+  
+}
+
+
+.celebPhoto {
+  width: 50%;
+  height: 560px;
+  float: left;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.85);
+  padding: 155px 116px 285px 116px;
+  margin: -673px 0 58px 0;
+  position: relative;
+  color: whitesmoke;
+  height: auto;
+  width: 100%;
+}
+
+.watcht {
+  color: black;
+  background-color: #ffb01e;
+  border-radius: 40px;
+  height: 40px;
+  margin-top: -9px;
+  width: 164px;
+  font-weight: bolder;
+  border: 1px solid darkgray;
+}
+
+
+.carousel-item > img {
+  height: 100vh
+}
+
+.licon {
+  display: inline-block;
+  background-color: #ffb01e;
+  opacity: 1;
+  border-radius: 0px 8px 9px 0px;
+  padding-top: 20px;
+
+  /* margin-left: 30pc; */
+  margin: 1px .25rem 0 27.6pc;
+  width: 6.18em;
+  height: 3.5em;
+  position: relative;
+  font-family: Icons;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: inherit;
+  text-align: center;
+  speak: none;
+  /* font-smoothing: antialiased; */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.parallax {
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: black
+}
+
+.big-celeb-body {
+  width: 100%;
+  height: 700px;
+  background-color: #ccc;
+}
+
+.big-celeb-body img {
+  width: 65%;
+}
+
+/* .celebDescription {
+  color: whitesmoke;
+  width: 50%;
+  padding: 30px;
+  height: 35pc;
+  background-color: rgba(0,0,0, 0.6);
+  position: relative
+} */
+
+.biodescrip {
+  width: 95%;
+  float: left;
+  margin: auto;
+  margin-top: 30px;
+  color: ccc;
+  background-color: rgba(0,0,0, 0.7);
+  padding: 10px 20px 20px 20px;
+  border-radius: 8px;
+  height: auto
+}
+
+
+.bio {
+  margin-top: 30px;
+  height: auto;
+  width: 100%
+}
+
+.biodeet {
+  width: 30%;
+  height: auto;
+  float: left;
+  padding: 0
+}
+
+.celeb_achievements {
+  float: left;
+  padding: 30px;
+  background-color: rgba(0,0,0, 0.6);
+  width: 100%;
+  color: whitesmoke;
+  position: relative
+}
+
+.actedMovies{
+  width: 50%;
+  float: left;
+}
+
+.movieActedYear {
+  width: 100%;
+}
+
+.Tvshows {
+  float: right;
+  width: 50%;
+  padding-left: 0px;
+}
+
+.celebBio {
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.singleMoviehead {
+  width: 46%;
+   height: 380px;
+   float: left;
+   margin-left: 4.001199999999999999999%;
+}
+
+.play {
+  width: 90%;
+  height:350px;
+  margin: auto;
+  margin-bottom: 60px;
+  padding: 10px
+}
+
+.moviedetail {
+  width: 46%;
+  height: 360px;
+  float: left;
+  padding: 30px 20px
+}
+
+.fullPlot {
+  margin-top: 25px;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.fullPlot > span {
+  margin-top: 20px
+}
+
+.moviedetail > h1 {
+  margin-top: 30px;
+  font-weight: bolder;
+}
+
+.small {
+  font-size: 0.5em;
+  font-weight: bold;
+}
+
+.ratingSomething {
+  height: 50px;
+  border: 1px solid;
+  line-height: 3em;
+  padding-left: 20px;
+  margin-top: 65px;
+}
+
+
+.information {
+  width: 90%;
+  margin: 30px 5%;
+  height: 190px
+}
+
+.information > div{
+  width: 24%;
+  float: left;
+}
+
+hr {
+  width:90%;
+}
+
+.cast, .awards, .photos {
+  margin: 30px 5%;
+
+}
+
+.singlemovieBody{
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-between;
+  padding: 0 10px;
+  display: flex;
+  line-height: 3em;
+}
+
+.singlemovieBody > span {
+  font-size: bold;
+}
+
+.modalClose {
+  float: right;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+.header {
+  margin: auto;
+  margin-left: 10px
+}
+
+.modal-content-center {
+  padding-right: 40%;
+  margin-top: -15px;
+  float: right
+}
+
+.trigger{
+  color: black;
+  margin-top: 14px;
+  margin-left: 13px;
+  margin-right: 10px;
+  background-color: #ffb01e;
+}
+
+.load {
+  fill: #ffb01e;
+  width: 11%;
+  position: fixed;
+  height: 23%;
+  bottom: 31%;
+  left: 42%;
+}
+
+
+.modal-content {
+  text-align: center;
+  margin: auto;
+  width: 351px;
+  margin-top: 1rem;
+  border: none;
+  padding: 45px;
+}
+
+
+.modal_half {
+  margin-top: 20px;
+  line-height: 30px;
+  width: 50%;
+  height: 96%;
+  border-right: 2px solid grey;
+  padding-top: 10px;
+  float: left;
+  padding-left: 20px 
+}
+
+.modal_half2 {
+  width: 50%;
+  height: 70%;
+  padding: 20px 20px 0 20px;
+  text-align: center
+}
+
+.content {
+  height: 240px
+}
+
+.modal_half > input {
+  margin-bottom: 20px
+}
+
+.socialLink {
+  padding-left: 40px
+}
+
+.modal-deet {
+  padding-bottom: 30px;    
+  width: 100%;
+  padding-top: 7px;
+}
+
+.myInput{
+  margin-bottom: 20px;
+  margin: auto;
+  width: 351px;
+  
+}
+
+.mass {
+  height: 40px;
+  width: 351px;
+  margin-top: 10px;
+  border-radius: 8px
+}
+
+.modal {
+  margin: auto;
+  height: 42%;
+  margin-top: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 40%;
+}
+
+
+.carousel-control-next, .carousel-control-prev {
+  position: unset;
+  display: none
+}
+
+* {box-sizing: border-box;}
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.captionName {
+  font-size: 4em;
+  margin-bottom: -9px;
+  margin-top: 0;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+  display: block
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+
+
+.thelay {
+  background-color: rgba(0,0,0,0.5);
+  padding: 155px 116px 285px 116px;
+  margin: -600px 0 58px 0;
+  position: relative;
+  color: whitesmoke;
+  height: 90.2vh;
+  width: 100%;
+}
+
+a {
+  color: black;
+}
+
+.fullheight {
+    height: 100%
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.searchQuery {
+  background-color: black;
+  color: whitesmoke
+}
+
+.Search-result-container {
+  position: absolute;
+  width: 39%;
+  /* margin-left: 28.6%; */
+  margin-top: 0%;
+  background-color: whitesmoke;
+  border: 1px solid darkgray;
+  padding: 30px;
+}
+
+.resultsearch {
+  position: relative;
+  bottom: 340px;
+  width: 30pc;
+  top: 2pc;
+  left: 45%;
+}
+
+
+.searchLabel {
+  color: whitesmoke;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.carousel-indicators {
+  visibility: hidden;
+}
+
+.movroot {
+  width: 70%;
+  margin: auto;
+  margin-top: 2px
+}
+
+.movhide {
+  overflow-x: hidden;
+  width: 90%;
+  margin: 30px 5%;
+}
+
+.search {
+  float: right;
+  width: 50%;
+}
+
+.active {
+  background-color: unset;
+}
+
+.movietab {
+  margin-top: -52px;
+  position: relative
+}
+
+
+.trigger{
+  color: black
+}
+
+
+.trigger {
+  font-weight: bolder;
+  color: black
+}
+
+
+.headerlogo {
+  width: 50px;
+  margin-left: 40px;
+  visibility: inherit;
+}
+
+.headerlogo1 {
+  width: 50px;
+  margin-left: 40px;
+  visibility: hidden;
+}
+
+.headerlogo:hover {
+  visibility: hidden;
+}
+
+.headerlogo1:hover {
+  visibility: inherit;
+}
+
+.navbar-nav {
+  float: right;
+  margin-right: 30px
+}
+
+.head {
+  height: 64px;
+  background-color: rgba(0,0,0,0.78);
+  line-height: 3.2em;
+  box-shadow: 0px 8px 6px rgrba(0,0,0, 0.2);
+  width: 100%;
+  z-index: 1990;
+  position: fixed
+}
+
+.smoke {
+  color: #d4d2b1
+}
+
+.trigger:hover {
+  color: black
+}
+
+.smoke:visited{
+  color: #fae1b4;
+}
+
+.avatar {
+  height: 100%;
+  width: 100%;
+  background-color: #ffb01e;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.footer {
+  height: auto;
+  background-color: rgb(37, 33, 33);
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  overflow: auto;
+  position: relative;
+}
+
+
+.footer p {
+  color: #d4d2b1
+}
+
+.equal {
+  width: 50%;
+  padding-top: 6px
+}
+
+.subscribe {
+  border-radius: 4px;
+  width: 50%;
+  padding: 5px;
+  margin-right: 4px;
+  height: 30px;
+  margin-top: 6.5px;
+  font-weight: bold;
+  padding-right: 24px
+}
+
+ul {
+  list-style-type: none;
+}
+
+.big-box {
+  align-content: center
+}
+
+.box {
+  list-style-type: none;
+  display: list-item;
+  float: left;
+}
+
+.box1 {
+  text-align: left;
+  width: 25%;
+  border-right: 1px solid rgb(67, 65, 63);
+  padding: 6px 20px;
+  float: left;
+}
+
+.box2 {
+  text-align: left;
+  float: left;
+  padding: 6px 20px;
+  width: 25%;
+  border-right: 1px solid rgb(67, 65, 63);
+}   	
+
+.sign {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.contact {
+  float: right;
+  margin-top: -82px;
+  line-height: 17px;
+  text-align: right;
+}
+
+.dem {
+  text-align: center
+}
+
+.dem > h1 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: -0.5rem;
+  font-size: 2.5rem;
+}
+
+
+.no-box {
+  border: none;
+  margin-top: -3px;
+}
+
+.hidden {
+  margin-top: -3px;
+}
+
+.fa {
+  margin: 0rem
+}
+
+.commentBody {
+  width: 18%;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 24px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 8px;
+  float: left;
+  margin-bottom: 24px;
+}
+
+.commentAvatar {
+  height: 50px;
+  width: 50px;
+}
+
+.commentImage {
+  border-radius: 50%;
+  position: relative;
+  width: 30%;
+  margin-top: -70px;
+  margin-bottom: -10px
+}
+
+.commentName {
+  font-size: 1em;
+}
+
+.point {
+  cursor: pointer;
+}
+
+.commentDate {
+  float: right
+}
+
+.commentComment {
+  text-align: justify;
+}
+
+.commentStars {
+  font-size: 1em;
+  color: #ffb01e;
+  float: left;
+}
+
+.commentgroup {
+  margin-left: 0%;
+}
+
+.icon {
+  font-size: 1.5em;
+  color: #ffb01e
+}
+
+.myloader{
+  margin-top: 20px
+}
+
+.large {
+  height: 300px;
+  width: 20%;
+  background-color: transparent;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.small {
+  height: 75%;
+  width: 96%;
+  background-color: #eee444
+}
+
+.descr{
+  background-color: palevioletred;
+  color: whitesmoke;
+  height: 25%;
+  width: 96%
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 0px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  width: 50px;
+}
+
+
+@media screen and (max-width: 500px){
+  .sliderContainer{
+    height: 50vh;
+  }
+
+  .searchForm {
+    margin-top: -8pc;
+    width: 100%
+  }
+  .form-control {
+    height: calc(3.25rem + 2px);
+  }
+  .mern {
+    padding-top: 13px;
+    background-color: rgb(255, 176, 30);
+    width: 4pc;
+    height: 40px;
+  }
+  .carousel-item > img{
+    height: 50vh
+  }
+  .head {
+    height: 55px;
+  }
+
+  .headerlogo{
+    margin-left: 10px
+  }
+  .movietab{
+    margin-top: 0px;
+    }
+  
+  .searchText {
+      width: 100%
+  }
+
+  .trend> div:hover, .celeb > div:hover {
+    height: 240px;
+    width: 50%
+  }
+
+  .navbar-light .navbar-toggler {
+    border-color: #ffb01e;
+  }
+  .myInput {
+    width: 100%;
+  }
+
+  .thelay {
+    background-color: rgba(0,0,0,0.8);
+    padding: 155px 116px 285px 116px;
+    margin: -440px 0 46px 0;
+    height: 50vh
+  }
+
+  .bigscreen {
+    margin-top: -44px;
+  }
+
+  .slide {
+    height: 45vh
+  }
+  .carousel-inner {
+    height: 45vh;
+  }
+  .styles_modal__gNwvD {
+      width: 85%;
+  }
+
+  .mass {
+    width: 100%;
+    font-size: 12px;
+    height: 30px;
+  }
+
+  .modal-content {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .trend> div, .celeb > div {
+    height: 235px;
+    width: 49%;
+  }
+
+  .trend >div:first-child {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .box1, .dem, .box2, .box {
+      width: 100%;
+      border: none;
+  }
+
+  .celebPhoto {
+      width: 100%;
+      height: auto;
+      float: left;
+  }
+
+  .celeb_achievements {
+      margin-top: 0px
+  }
+  
+  .background {
+      width: 100%;
+  }
+
+  .searchLabel {
+      font-size: 0.92pc;
+      margin-bottom: 10px;
+  }
+  
+  .body {
+      margin: 30px 5% 30px 5%;
+  }
+  
+  .searchie{
+      height: 30px;
+  }
+
+  
+  .licon {
+      display: none;
+      visibility: hidden;
+      margin: 1px 0.25rem 0 8.2pc     
+  }
+  
+  .Tvshows{
+      padding-left: 0px;
+  }
+
+  .biodeet{
+      width: 40%;
+      padding: 0
+  }
+  
+  .celeb_achievements{
+      float: left;
+      padding: 30px;
+      margin-top: 0px;
+      background-color: rgba(0,0,0, 0.6);
+      color: whitesmoke;
+  }
+
+  .celebname {
+      margin: 0;
+      padding: 0
+  }
+  .celebBio{
+      margin: 0;
+      padding: 0;
+  }
+
+  .biodescrip{
+      padding: 20px;
+      padding-top: 10px;
+      width: 100%;
+  }
+
+  .actedMovies {
+      float: left;
+      min-width: 100%
+  }
+  
+
+  .general {
+    padding-top: 55px;
+  }
+
+  .Tvshows {
+      float: left;
+      min-width: 100%;
+      margin-top: 30px;
+      padding-left: 0px
+  }
+
+  .captionName {
+    font-size: 1.3em;
+    margin-bottom: -5px;
+    margin-top: 10pc;
+  }
+
+  .overlay {
+  padding: 156px 116px 44px 27px;
+  margin: -536px 0 58px 0;
+  }
+
+  .overlay > h2 {
+    font-size: 1em;
+  }
+  .watcht{
+    font-size: 0.8em;
+    width: 110px;
+    margin-top: -22px;
+    height: 30px;
+  }
+
+  .celebDescription {
+    color: whitesmoke;
+    width: 100%;
+    padding: 30px;
+    height: auto;
+    background-color: rgba(0,0,0, 0.6);
+    position: relative;
+    float: right;
+  }  
+
+  .celebPhoto{
+    margin-top: -8px
+  }
+
+  .overlay > div {
+    font-size: 0.8em;
+  }
+
+  .singleMoviehead {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  
+  .singlemovieBody {
+    display: inline-grid;
+  }
+
+  .play {
+    width: 100%;
+    margin-bottom: 0;
+    height: auto;
+  }
+
+  .moviedetail {
+    width: 100%;
+    height: auto;
+  }
+  .information > div {
+    float: unset;
+    width: 100%;
+  }
+  .information {
+    height: auto;
+  }
+  .load {
+    width:40%;
+  }
+}
