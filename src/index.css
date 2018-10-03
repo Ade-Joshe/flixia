@@ -1136,11 +1136,11 @@ ul {
   }
 
   .celeb > div, .trend > div {
-    height: 285px;
+    height: 225px;
   }
 
   .celeb > div:hover, .trend > div:hover {
-    height: 220px;
+    height: 230px;
     width: inherit
   }
   .searchLabel {
