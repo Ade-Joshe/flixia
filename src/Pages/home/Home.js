@@ -7,6 +7,7 @@ import ReactLoading from 'react-loading'
 import { NavLink } from 'react-router-dom'
 import HomeSlide from '../components/homeSlides';
 
+
 class Home extends Component {
     constructor(props) {
         super(props);

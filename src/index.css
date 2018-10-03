@@ -458,15 +458,6 @@ a {
   width: 65%;
 }
 
-/* .celebDescription {
-  color: whitesmoke;
-  width: 50%;
-  padding: 30px;
-  height: 35pc;
-  background-color: rgba(0,0,0, 0.6);
-  position: relative
-} */
-
 .biodescrip {
   width: 95%;
   float: left;
@@ -633,6 +624,7 @@ hr {
   margin-top: 14px;
   margin-left: 13px;
   margin-right: 10px;
+  font-weight: bold;
   background-color: #ffb01e;
 }
 
@@ -887,17 +879,6 @@ a {
 }
 
 
-.trigger{
-  color: black
-}
-
-
-.trigger {
-  font-weight: bolder;
-  color: black
-}
-
-
 .headerlogo {
   width: 50px;
   margin-left: 40px;
@@ -1146,10 +1127,50 @@ ul {
   width: 50px;
 }
 
+@media screen and (max-width: 800px){
+.thelay {
+  margin: -505px 0 58px 0;
+}
+  .searchForm > div {
+    width: 100%
+  }
+
+  .celeb > div, .trend > div {
+    height: 285px;
+  }
+
+  .celeb > div:hover, .trend > div:hover {
+    height: 220px;
+    width: inherit
+  }
+  .searchLabel {
+    font-size: 1.62em;
+  }
+  .searchForm {
+    margin-top: -14pc;
+  }
+}
+
+@media screen and (max-width: 760px){
+    .navbar-collapse {
+    background-color: rgba(0,0,0, 0.78);
+  }
+}
+
+
 
 @media screen and (max-width: 500px){
+  .navbar-collapse {
+    background-color: rgba(0,0,0, 0.78);
+  }
+
   .sliderContainer{
     height: 50vh;
+  }
+
+  .trigger {
+    margin: unset;
+
   }
 
   .searchForm {
@@ -1395,4 +1416,12 @@ ul {
   .load {
     width:40%;
   }
+
+  .nav-item > a {
+    float:right
+  }
+
 }
+  .navbar-toggler {
+    background-color: #ffb01e;
+  }
